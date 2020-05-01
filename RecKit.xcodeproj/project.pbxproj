@@ -1,0 +1,1879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B45DEA8611DC8AA80004A41B /* all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B45DEA9111DC8AE30004A41B /* Build configuration list for PBXAggregateTarget "all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				B418EFE518B34893005E847A /* PBXTargetDependency */,
+				B418EFE318B34890005E847A /* PBXTargetDependency */,
+			);
+			name = all;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		B404C4771DFA8E2600528FE9 /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
+		B404C47A1DFA8EA400528FE9 /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
+		B404C47B1DFA8F5400528FE9 /* RecKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46FECC518E6C6C0000CD71D /* RecKit.framework */; };
+		B40AD5B71B2EADC50001F7F1 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
+		B40AD5B81B2EB5AA0001F7F1 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
+		B4105F03171945A2003E8F58 /* Dicom.h in Headers */ = {isa = PBXBuildFile; fileRef = B4937BBD16F05B130021A59E /* Dicom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4105F04171945A2003E8F58 /* Dicom.m in Sources */ = {isa = PBXBuildFile; fileRef = B4937BBF16F05B180021A59E /* Dicom.m */; };
+		B4105F1417194EBC003E8F58 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
+		B4194D961A25B55A00E2FDE9 /* t2d.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194D941A25B55A00E2FDE9 /* t2d.m */; };
+		B4194D9B1A25C4E600E2FDE9 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B42B5E3D1CAA60A80003E6B4 /* MATLAB.h in Headers */ = {isa = PBXBuildFile; fileRef = B42B5E3B1CAA60A80003E6B4 /* MATLAB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B42B5E3E1CAA60A80003E6B4 /* MATLAB.h in Headers */ = {isa = PBXBuildFile; fileRef = B42B5E3B1CAA60A80003E6B4 /* MATLAB.h */; };
+		B42B5E3F1CAA60A80003E6B4 /* MATLAB.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B5E3C1CAA60A80003E6B4 /* MATLAB.m */; };
+		B42B5E401CAA60A80003E6B4 /* MATLAB.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B5E3C1CAA60A80003E6B4 /* MATLAB.m */; };
+		B42E83AC18A8D523004BAA1A /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
+		B44C548B1A3AD92D00405BE7 /* libRecKit.a in Resources */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B45D447F1AE4DC3C004BBD83 /* RecList.h in Headers */ = {isa = PBXBuildFile; fileRef = B45D447D1AE4DC3C004BBD83 /* RecList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B45D44801AE4DC3C004BBD83 /* RecList.h in Headers */ = {isa = PBXBuildFile; fileRef = B45D447D1AE4DC3C004BBD83 /* RecList.h */; };
+		B45D44811AE4DC3C004BBD83 /* RecList.m in Sources */ = {isa = PBXBuildFile; fileRef = B45D447E1AE4DC3C004BBD83 /* RecList.m */; };
+		B45D44821AE4DC3C004BBD83 /* RecList.m in Sources */ = {isa = PBXBuildFile; fileRef = B45D447E1AE4DC3C004BBD83 /* RecList.m */; };
+		B4764B781448223100FC802D /* rec.m in Sources */ = {isa = PBXBuildFile; fileRef = B4764B451448209300FC802D /* rec.m */; };
+		B477D19F244EF67200267C69 /* tagDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B41AA17B19BD96F1004B9472 /* tagDictionary.plist */; };
+		B477D1A0244EF68A00267C69 /* vrDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B472717A19BEE8E600F2CA3C /* vrDictionary.plist */; };
+		B478816C12F16299007DAE42 /* mkgrid.m in Sources */ = {isa = PBXBuildFile; fileRef = B478813C12F15F1D007DAE42 /* mkgrid.m */; };
+		B480B32B18A361FA002C1E3E /* Dicom.h in Headers */ = {isa = PBXBuildFile; fileRef = B4937BBD16F05B130021A59E /* Dicom.h */; };
+		B480B32C18A361FE002C1E3E /* Dicom.m in Sources */ = {isa = PBXBuildFile; fileRef = B4937BBF16F05B180021A59E /* Dicom.m */; };
+		B484B60F1DBF45040031F997 /* test_meas.m in Sources */ = {isa = PBXBuildFile; fileRef = B484B60D1DBF44FA0031F997 /* test_meas.m */; };
+		B484B6111DBF456A0031F997 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
+		B484B6121DBF45720031F997 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B484B6131DBF458B0031F997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
+		B48818E0100B384D003D2C3C /* libtest.m in Sources */ = {isa = PBXBuildFile; fileRef = B48818DF100B384D003D2C3C /* libtest.m */; };
+		B48B601C1AB6B56200CA54D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
+		B4912F881DC4798000FD0B65 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4912F871DC4798000FD0B65 /* libz.tbd */; };
+		B4937BDA16F07B530021A59E /* readDicom.m in Sources */ = {isa = PBXBuildFile; fileRef = B4937BD916F07B530021A59E /* readDicom.m */; };
+		B4988BFE1A381B40004E7CA0 /* gMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B4988BFD1A381B40004E7CA0 /* gMap.m */; };
+		B4988C021A38275B004E7CA0 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4B83DE419B98B170048376F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
+		B4B83DEF19B98B480048376F /* dumpDicom.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B83DEE19B98B480048376F /* dumpDicom.m */; };
+		B4B83DF019B98BD70048376F /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4C0108C1C60A4C800E15BD5 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4C0108D1C60A60700E15BD5 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
+		B4C0108E1C60AB2A00E15BD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
+		B4C0108F1C60AB3000E15BD5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D0F8CB19ED24B500B5731F /* Accelerate.framework */; };
+		B4C010901C60AB4400E15BD5 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
+		B4C010911C60AC5500E15BD5 /* dump_asc.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA3E1B2587F40023B283 /* dump_asc.m */; };
+		B4C10AF718EBE35B008F75E3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76218EA9F120060E7BB /* Accelerate.framework */; };
+		B4D0F8CC19ED24B500B5731F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D0F8CB19ED24B500B5731F /* Accelerate.framework */; };
+		B4D8B76318EA9F120060E7BB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76218EA9F120060E7BB /* Accelerate.framework */; };
+		B4D8B76518EA9F210060E7BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76418EA9F210060E7BB /* Foundation.framework */; };
+		B4DD25671946F77300CE5C0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
+		B4DD25711946F77E00CE5C0F /* epicrec.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C9806C11EDCB5800E241EC /* epicrec.m */; };
+		B4DD25721946F79F00CE5C0F /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4E5377519347471005F056E /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4E5377619347487005F056E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76218EA9F120060E7BB /* Accelerate.framework */; };
+		B4E54E641CABBB4D00808153 /* mat2ko.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E54E591CABBB2500808153 /* mat2ko.m */; };
+		B4E54E651CABBD8400808153 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4E54E661CABBDCC00808153 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
+		B4E8DA861DC9ECDC00196701 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
+		B4E8DA871DC9ECFD00196701 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
+		B4E8DA881DC9ED0F00196701 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D0F8CB19ED24B500B5731F /* Accelerate.framework */; };
+		B4E8DA891DC9ED2F00196701 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
+		B4E96070190670820034884D /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
+		B4EF73BC1AC52B9A00E26B45 /* Rec2DRef.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73BD1AC52B9A00E26B45 /* Rec2DRef.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */; };
+		B4EF73BE1AC52B9A00E26B45 /* Rec2DRef.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF739A1AC52B9A00E26B45 /* Rec2DRef.m */; };
+		B4EF73BF1AC52B9A00E26B45 /* Rec2DRef.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF739A1AC52B9A00E26B45 /* Rec2DRef.m */; };
+		B4EF73C01AC52B9A00E26B45 /* Rec3DRef.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF739B1AC52B9A00E26B45 /* Rec3DRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73C11AC52B9A00E26B45 /* Rec3DRef.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF739B1AC52B9A00E26B45 /* Rec3DRef.h */; };
+		B4EF73C21AC52B9A00E26B45 /* Rec3DRef.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF739C1AC52B9A00E26B45 /* Rec3DRef.m */; };
+		B4EF73C31AC52B9A00E26B45 /* Rec3DRef.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF739C1AC52B9A00E26B45 /* Rec3DRef.m */; };
+		B4EF73C41AC52B9A00E26B45 /* RecCoilProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF739D1AC52B9A00E26B45 /* RecCoilProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73C51AC52B9A00E26B45 /* RecCoilProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF739D1AC52B9A00E26B45 /* RecCoilProfile.h */; };
+		B4EF73C61AC52B9A00E26B45 /* RecCoilProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF739E1AC52B9A00E26B45 /* RecCoilProfile.m */; };
+		B4EF73C71AC52B9A00E26B45 /* RecCoilProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF739E1AC52B9A00E26B45 /* RecCoilProfile.m */; };
+		B4EF73C81AC52B9A00E26B45 /* RecGridder.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF739F1AC52B9A00E26B45 /* RecGridder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73C91AC52B9A00E26B45 /* RecGridder.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF739F1AC52B9A00E26B45 /* RecGridder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73CA1AC52B9A00E26B45 /* RecGridder.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A01AC52B9A00E26B45 /* RecGridder.m */; };
+		B4EF73CB1AC52B9A00E26B45 /* RecGridder.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A01AC52B9A00E26B45 /* RecGridder.m */; };
+		B4EF73CC1AC52B9A00E26B45 /* RecImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73A11AC52B9A00E26B45 /* RecImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73CD1AC52B9A00E26B45 /* RecImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73A11AC52B9A00E26B45 /* RecImage.h */; };
+		B4EF73CE1AC52B9A00E26B45 /* RecImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A21AC52B9A00E26B45 /* RecImage.m */; };
+		B4EF73CF1AC52B9A00E26B45 /* RecImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A21AC52B9A00E26B45 /* RecImage.m */; };
+		B4EF73D21AC52B9A00E26B45 /* RecImageWarp.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A41AC52B9A00E26B45 /* RecImageWarp.m */; };
+		B4EF73D31AC52B9A00E26B45 /* RecImageWarp.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A41AC52B9A00E26B45 /* RecImageWarp.m */; };
+		B4EF73D71AC52B9A00E26B45 /* RecKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73A71AC52B9A00E26B45 /* RecKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73D81AC52B9A00E26B45 /* RecKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73A71AC52B9A00E26B45 /* RecKit.h */; };
+		B4EF73D91AC52B9A00E26B45 /* RecLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73A81AC52B9A00E26B45 /* RecLoop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73DA1AC52B9A00E26B45 /* RecLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73A81AC52B9A00E26B45 /* RecLoop.h */; };
+		B4EF73DB1AC52B9A00E26B45 /* RecLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A91AC52B9A00E26B45 /* RecLoop.m */; };
+		B4EF73DC1AC52B9A00E26B45 /* RecLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73A91AC52B9A00E26B45 /* RecLoop.m */; };
+		B4EF73DD1AC52B9A00E26B45 /* RecLoopControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73AA1AC52B9A00E26B45 /* RecLoopControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73DE1AC52B9A00E26B45 /* RecLoopControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73AA1AC52B9A00E26B45 /* RecLoopControl.h */; };
+		B4EF73DF1AC52B9A00E26B45 /* RecLoopControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73AB1AC52B9A00E26B45 /* RecLoopControl.m */; };
+		B4EF73E01AC52B9A00E26B45 /* RecLoopControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73AB1AC52B9A00E26B45 /* RecLoopControl.m */; };
+		B4EF73E11AC52B9A00E26B45 /* RecLoopIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73AC1AC52B9A00E26B45 /* RecLoopIndex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73E21AC52B9A00E26B45 /* RecLoopIndex.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73AC1AC52B9A00E26B45 /* RecLoopIndex.h */; };
+		B4EF73E31AC52B9A00E26B45 /* RecLoopIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73AD1AC52B9A00E26B45 /* RecLoopIndex.m */; };
+		B4EF73E41AC52B9A00E26B45 /* RecLoopIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73AD1AC52B9A00E26B45 /* RecLoopIndex.m */; };
+		B4EF73E51AC52B9A00E26B45 /* RecMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73AE1AC52B9A00E26B45 /* RecMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73E61AC52B9A00E26B45 /* RecMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73AE1AC52B9A00E26B45 /* RecMatrix.h */; };
+		B4EF73E71AC52B9A00E26B45 /* RecMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73AF1AC52B9A00E26B45 /* RecMatrix.m */; };
+		B4EF73E81AC52B9A00E26B45 /* RecMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73AF1AC52B9A00E26B45 /* RecMatrix.m */; };
+		B4EF73E91AC52B9A00E26B45 /* RecNoise.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73B01AC52B9A00E26B45 /* RecNoise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73EA1AC52B9A00E26B45 /* RecNoise.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73B01AC52B9A00E26B45 /* RecNoise.h */; };
+		B4EF73EB1AC52B9A00E26B45 /* RecNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73B11AC52B9A00E26B45 /* RecNoise.m */; };
+		B4EF73EC1AC52B9A00E26B45 /* RecNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73B11AC52B9A00E26B45 /* RecNoise.m */; };
+		B4EF73F11AC52B9A00E26B45 /* RecResampler.cl in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73B41AC52B9A00E26B45 /* RecResampler.cl */; };
+		B4EF73F21AC52B9A00E26B45 /* RecResampler.cl in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73B41AC52B9A00E26B45 /* RecResampler.cl */; };
+		B4EF73F31AC52B9A00E26B45 /* RecResampler.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73B51AC52B9A00E26B45 /* RecResampler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73F41AC52B9A00E26B45 /* RecResampler.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73B51AC52B9A00E26B45 /* RecResampler.h */; };
+		B4EF73F51AC52B9A00E26B45 /* RecResampler.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73B61AC52B9A00E26B45 /* RecResampler.m */; };
+		B4EF73F61AC52B9A00E26B45 /* RecResampler.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73B61AC52B9A00E26B45 /* RecResampler.m */; };
+		B4EF73FB1AC52B9A00E26B45 /* RecUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73B91AC52B9A00E26B45 /* RecUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF73FC1AC52B9A00E26B45 /* RecUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73B91AC52B9A00E26B45 /* RecUtil.h */; };
+		B4EF73FD1AC52B9A00E26B45 /* RecUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73BA1AC52B9A00E26B45 /* RecUtil.m */; };
+		B4EF73FE1AC52B9A00E26B45 /* RecUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF73BA1AC52B9A00E26B45 /* RecUtil.m */; };
+		B4EF73FF1AC52B9A00E26B45 /* timer_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73BB1AC52B9A00E26B45 /* timer_macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4EF74001AC52B9A00E26B45 /* timer_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73BB1AC52B9A00E26B45 /* timer_macros.h */; };
+		B4F7AA441B2587F40023B283 /* mdh.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA3F1B2587F40023B283 /* mdh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F7AA451B2587F40023B283 /* mdh.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA3F1B2587F40023B283 /* mdh.h */; };
+		B4F7AA461B2587F40023B283 /* Siemens.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA401B2587F40023B283 /* Siemens.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F7AA471B2587F40023B283 /* Siemens.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA401B2587F40023B283 /* Siemens.h */; };
+		B4F7AA481B2587F40023B283 /* Siemens.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA411B2587F40023B283 /* Siemens.m */; };
+		B4F7AA491B2587F40023B283 /* Siemens.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA411B2587F40023B283 /* Siemens.m */; };
+		B4F7AA521B2588510023B283 /* Toshiba.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA501B2588510023B283 /* Toshiba.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F7AA531B2588510023B283 /* Toshiba.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA501B2588510023B283 /* Toshiba.h */; };
+		B4F7AA541B2588510023B283 /* Toshiba.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA511B2588510023B283 /* Toshiba.m */; };
+		B4F7AA551B2588510023B283 /* Toshiba.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA511B2588510023B283 /* Toshiba.m */; };
+		B4F7AA5A1B25887B0023B283 /* GE.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA561B25887B0023B283 /* GE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F7AA5B1B25887B0023B283 /* GE.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA561B25887B0023B283 /* GE.h */; };
+		B4F7AA5C1B25887B0023B283 /* GE.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA571B25887B0023B283 /* GE.m */; };
+		B4F7AA5D1B25887B0023B283 /* GE.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA571B25887B0023B283 /* GE.m */; };
+		B4F7AA5E1B25887B0023B283 /* rdbm.11.0.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA581B25887B0023B283 /* rdbm.11.0.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F7AA5F1B25887B0023B283 /* rdbm.11.0.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA581B25887B0023B283 /* rdbm.11.0.h */; };
+		B4F7AA601B25887B0023B283 /* slice_factor.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA591B25887B0023B283 /* slice_factor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F7AA611B25887B0023B283 /* slice_factor.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F7AA591B25887B0023B283 /* slice_factor.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B418EFE218B34890005E847A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4943BCC171808AF0071C5C8;
+			remoteInfo = RecKit;
+		};
+		B418EFE418B34893005E847A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B480B2FB18A361D1002C1E3E;
+			remoteInfo = libRecKit;
+		};
+		B44C54891A3AD91D00405BE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B480B2FB18A361D1002C1E3E;
+			remoteInfo = libRecKit;
+		};
+		B47260E31769C064003EACAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4943BCC171808AF0071C5C8;
+			remoteInfo = RecKit;
+		};
+		B48068731BE4AF2F004A9A6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45DEA8611DC8AA80004A41B;
+			remoteInfo = all;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4194D8C1A25B4F500E2FDE9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B484B6051DBF44D00031F997 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4937BCB16F07B380021A59E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4988BF51A381AF6004E7CA0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4B83DE119B98B170048376F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4DD25621946F77300CE5C0F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4E54E5C1CABBB3500808153 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B4E6DBB115DA3EAE003FF5C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B404C4781DFA8E7C00528FE9 /* libNumKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNumKit.a; path = ../../NumKit/build/NumKit.framework/Versions/A/Resources/libNumKit.a; sourceTree = "<group>"; };
+		B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNumKit.a; path = ../../NumKit/build/libNumKit.a; sourceTree = "<group>"; };
+		B4105F1317194EBC003E8F58 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		B4194D8E1A25B4F500E2FDE9 /* t2d */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = t2d; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4194D941A25B55A00E2FDE9 /* t2d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = t2d.m; sourceTree = "<group>"; };
+		B41AA17B19BD96F1004B9472 /* tagDictionary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = tagDictionary.plist; path = Dicom/tagDictionary.plist; sourceTree = "<group>"; };
+		B4223170244AD4E1006BF8DB /* instance_0.dcm */ = {isa = PBXFileReference; lastKnownFileType = file; name = instance_0.dcm; path = Dicom/instance_0.dcm; sourceTree = "<group>"; };
+		B42B5E3B1CAA60A80003E6B4 /* MATLAB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MATLAB.h; path = Src_MATLAB/MATLAB.h; sourceTree = "<group>"; };
+		B42B5E3C1CAA60A80003E6B4 /* MATLAB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MATLAB.m; path = Src_MATLAB/MATLAB.m; sourceTree = "<group>"; };
+		B45D447D1AE4DC3C004BBD83 /* RecList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecList.h; path = Src/RecList.h; sourceTree = "<group>"; };
+		B45D447E1AE4DC3C004BBD83 /* RecList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecList.m; path = Src/RecList.m; sourceTree = "<group>"; };
+		B46FECC518E6C6C0000CD71D /* RecKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RecKit.framework; path = build/RecKit.framework; sourceTree = "<group>"; };
+		B472717A19BEE8E600F2CA3C /* vrDictionary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = vrDictionary.plist; path = Dicom/vrDictionary.plist; sourceTree = "<group>"; };
+		B4764B451448209300FC802D /* rec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = rec.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		B478813C12F15F1D007DAE42 /* mkgrid.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = mkgrid.m; sourceTree = "<group>"; };
+		B47930941AB02947008C48AA /* RecImageCL_grid_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RecImageCL_grid_common.h; path = CL_old/RecImageCL_grid_common.h; sourceTree = "<group>"; };
+		B47930951AB02947008C48AA /* RecImageCL_grid.cl */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.opencl; name = RecImageCL_grid.cl; path = CL_old/RecImageCL_grid.cl; sourceTree = "<group>"; };
+		B47930961AB02947008C48AA /* RecImageCL_grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RecImageCL_grid.h; path = CL_old/RecImageCL_grid.h; sourceTree = "<group>"; };
+		B47930971AB02947008C48AA /* RecImageCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RecImageCL.m; path = CL_old/RecImageCL.m; sourceTree = "<group>"; };
+		B480B2FC18A361D1002C1E3E /* libRecKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B484B6071DBF44D00031F997 /* test_meas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_meas; sourceTree = BUILT_PRODUCTS_DIR; };
+		B484B60D1DBF44FA0031F997 /* test_meas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test_meas.m; path = Src_Siemens/test_meas.m; sourceTree = "<group>"; };
+		B48818DF100B384D003D2C3C /* libtest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = libtest.m; sourceTree = "<group>"; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		B48A67A912703E8E00620241 /* mkkernhdr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mkkernhdr.c; sourceTree = "<group>"; };
+		B48B601D1AB6D18100CA54D6 /* RecResampler.cl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecResampler.cl.h; path = build/libRecKit.build/DerivedSources/RecResampler.cl.h; sourceTree = "<group>"; };
+		B4912F871DC4798000FD0B65 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B4937BBD16F05B130021A59E /* Dicom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dicom.h; path = Dicom/Dicom.h; sourceTree = "<group>"; };
+		B4937BBF16F05B180021A59E /* Dicom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dicom.m; path = Dicom/Dicom.m; sourceTree = "<group>"; };
+		B4937BD916F07B530021A59E /* readDicom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = readDicom.m; path = Dicom/readDicom.m; sourceTree = "<group>"; };
+		B4988BF71A381AF6004E7CA0 /* gMap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gMap; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4988BFD1A381B40004E7CA0 /* gMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gMap.m; sourceTree = "<group>"; };
+		B4B25A7C174DE4F8007F2758 /* libtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libtest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B25A7E174DE4F8007F2758 /* mkgrid */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mkgrid; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B25A7F174DE4F8007F2758 /* dump_asc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dump_asc; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B25A80174DE4F8007F2758 /* RecKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B83DE319B98B170048376F /* dumpDicom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dumpDicom; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B83DEE19B98B480048376F /* dumpDicom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dumpDicom.m; path = Dicom/dumpDicom.m; sourceTree = "<group>"; };
+		B4C9806C11EDCB5800E241EC /* epicrec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = epicrec.m; sourceTree = "<group>"; };
+		B4D0F8CB19ED24B500B5731F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B4D82DB317324E5700E026EF /* rec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rec; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D82DB717324E7C00E026EF /* readDicom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = readDicom; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D8B76218EA9F120060E7BB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = ../../../../../System/Library/Frameworks/Accelerate.framework; sourceTree = "<group>"; };
+		B4D8B76418EA9F210060E7BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../../System/Library/Frameworks/Foundation.framework; sourceTree = "<group>"; };
+		B4DD25641946F77300CE5C0F /* epicrec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = epicrec; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4DD25661946F77300CE5C0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B4E54E591CABBB2500808153 /* mat2ko.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = mat2ko.m; path = Src_MATLAB/mat2ko.m; sourceTree = "<group>"; };
+		B4E54E5E1CABBB3500808153 /* mat2ko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mat2ko; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E9606F190670820034884D /* NumKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NumKit.framework; path = ../../NumKit/build/NumKit.framework; sourceTree = "<group>"; };
+		B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rec2DRef.h; path = Src/Rec2DRef.h; sourceTree = "<group>"; };
+		B4EF739A1AC52B9A00E26B45 /* Rec2DRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rec2DRef.m; path = Src/Rec2DRef.m; sourceTree = "<group>"; };
+		B4EF739B1AC52B9A00E26B45 /* Rec3DRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rec3DRef.h; path = Src/Rec3DRef.h; sourceTree = "<group>"; };
+		B4EF739C1AC52B9A00E26B45 /* Rec3DRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rec3DRef.m; path = Src/Rec3DRef.m; sourceTree = "<group>"; };
+		B4EF739D1AC52B9A00E26B45 /* RecCoilProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecCoilProfile.h; path = Src/RecCoilProfile.h; sourceTree = "<group>"; };
+		B4EF739E1AC52B9A00E26B45 /* RecCoilProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecCoilProfile.m; path = Src/RecCoilProfile.m; sourceTree = "<group>"; };
+		B4EF739F1AC52B9A00E26B45 /* RecGridder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecGridder.h; path = Src/RecGridder.h; sourceTree = "<group>"; };
+		B4EF73A01AC52B9A00E26B45 /* RecGridder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecGridder.m; path = Src/RecGridder.m; sourceTree = "<group>"; };
+		B4EF73A11AC52B9A00E26B45 /* RecImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecImage.h; path = Src/RecImage.h; sourceTree = "<group>"; };
+		B4EF73A21AC52B9A00E26B45 /* RecImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecImage.m; path = Src/RecImage.m; sourceTree = "<group>"; };
+		B4EF73A41AC52B9A00E26B45 /* RecImageWarp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecImageWarp.m; path = Src/RecImageWarp.m; sourceTree = "<group>"; };
+		B4EF73A71AC52B9A00E26B45 /* RecKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecKit.h; path = Src/RecKit.h; sourceTree = "<group>"; };
+		B4EF73A81AC52B9A00E26B45 /* RecLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecLoop.h; path = Src/RecLoop.h; sourceTree = "<group>"; };
+		B4EF73A91AC52B9A00E26B45 /* RecLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecLoop.m; path = Src/RecLoop.m; sourceTree = "<group>"; };
+		B4EF73AA1AC52B9A00E26B45 /* RecLoopControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecLoopControl.h; path = Src/RecLoopControl.h; sourceTree = "<group>"; };
+		B4EF73AB1AC52B9A00E26B45 /* RecLoopControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecLoopControl.m; path = Src/RecLoopControl.m; sourceTree = "<group>"; };
+		B4EF73AC1AC52B9A00E26B45 /* RecLoopIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecLoopIndex.h; path = Src/RecLoopIndex.h; sourceTree = "<group>"; };
+		B4EF73AD1AC52B9A00E26B45 /* RecLoopIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecLoopIndex.m; path = Src/RecLoopIndex.m; sourceTree = "<group>"; };
+		B4EF73AE1AC52B9A00E26B45 /* RecMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecMatrix.h; path = Src/RecMatrix.h; sourceTree = "<group>"; };
+		B4EF73AF1AC52B9A00E26B45 /* RecMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecMatrix.m; path = Src/RecMatrix.m; sourceTree = "<group>"; };
+		B4EF73B01AC52B9A00E26B45 /* RecNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecNoise.h; path = Src/RecNoise.h; sourceTree = "<group>"; };
+		B4EF73B11AC52B9A00E26B45 /* RecNoise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecNoise.m; path = Src/RecNoise.m; sourceTree = "<group>"; };
+		B4EF73B41AC52B9A00E26B45 /* RecResampler.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = RecResampler.cl; path = Src/RecResampler.cl; sourceTree = "<group>"; };
+		B4EF73B51AC52B9A00E26B45 /* RecResampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecResampler.h; path = Src/RecResampler.h; sourceTree = "<group>"; };
+		B4EF73B61AC52B9A00E26B45 /* RecResampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecResampler.m; path = Src/RecResampler.m; sourceTree = "<group>"; };
+		B4EF73B91AC52B9A00E26B45 /* RecUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecUtil.h; path = Src/RecUtil.h; sourceTree = "<group>"; };
+		B4EF73BA1AC52B9A00E26B45 /* RecUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecUtil.m; path = Src/RecUtil.m; sourceTree = "<group>"; };
+		B4EF73BB1AC52B9A00E26B45 /* timer_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer_macros.h; path = Src/timer_macros.h; sourceTree = "<group>"; };
+		B4EF74011AC536ED00E26B45 /* RecResampler.cl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = RecResampler.cl.c; path = build/libRecKit.build/DerivedSources/RecResampler.cl.c; sourceTree = "<group>"; };
+		B4F2E0161DB768300079F6E2 /* format_memo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = format_memo.txt; path = Src_Siemens/format_memo.txt; sourceTree = "<group>"; };
+		B4F7AA3E1B2587F40023B283 /* dump_asc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dump_asc.m; path = Src_Siemens/dump_asc.m; sourceTree = "<group>"; };
+		B4F7AA3F1B2587F40023B283 /* mdh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mdh.h; path = Src_Siemens/mdh.h; sourceTree = "<group>"; };
+		B4F7AA401B2587F40023B283 /* Siemens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Siemens.h; path = Src_Siemens/Siemens.h; sourceTree = "<group>"; };
+		B4F7AA411B2587F40023B283 /* Siemens.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Siemens.m; path = Src_Siemens/Siemens.m; sourceTree = "<group>"; };
+		B4F7AA501B2588510023B283 /* Toshiba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Toshiba.h; path = Src_Toshiba/Toshiba.h; sourceTree = "<group>"; };
+		B4F7AA511B2588510023B283 /* Toshiba.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Toshiba.m; path = Src_Toshiba/Toshiba.m; sourceTree = "<group>"; };
+		B4F7AA561B25887B0023B283 /* GE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GE.h; path = Src_GE/GE.h; sourceTree = "<group>"; };
+		B4F7AA571B25887B0023B283 /* GE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GE.m; path = Src_GE/GE.m; sourceTree = "<group>"; };
+		B4F7AA581B25887B0023B283 /* rdbm.11.0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rdbm.11.0.h; path = Src_GE/rdbm.11.0.h; sourceTree = "<group>"; };
+		B4F7AA591B25887B0023B283 /* slice_factor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slice_factor.h; path = Src_GE/slice_factor.h; sourceTree = "<group>"; };
+		B4F7AA621B2594810023B283 /* Run22486.7303.04.raw.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Run22486.7303.04.raw.xml; path = Src_Toshiba/Run22486.7303.04.raw.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B404C47B1DFA8F5400528FE9 /* RecKit.framework in Frameworks */,
+				B404C47A1DFA8EA400528FE9 /* NumKit.framework in Frameworks */,
+				B48B601C1AB6B56200CA54D6 /* Foundation.framework in Frameworks */,
+				B4C10AF718EBE35B008F75E3 /* Accelerate.framework in Frameworks */,
+				B42E83AC18A8D523004BAA1A /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4194D8B1A25B4F500E2FDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4194D9B1A25C4E600E2FDE9 /* libRecKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4764B501448218800FC802D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40AD5B81B2EB5AA0001F7F1 /* OpenCL.framework in Frameworks */,
+				B40AD5B71B2EADC50001F7F1 /* libNumKit.a in Frameworks */,
+				B4E5377619347487005F056E /* Accelerate.framework in Frameworks */,
+				B4E5377519347471005F056E /* libRecKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B478810E12F15D81007DAE42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B480B2F918A361D1002C1E3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B484B6041DBF44D00031F997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4912F881DC4798000FD0B65 /* libz.tbd in Frameworks */,
+				B484B6131DBF458B0031F997 /* Foundation.framework in Frameworks */,
+				B484B6121DBF45720031F997 /* libRecKit.a in Frameworks */,
+				B484B6111DBF456A0031F997 /* libNumKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4937BCA16F07B380021A59E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E8DA891DC9ED2F00196701 /* OpenCL.framework in Frameworks */,
+				B4E8DA881DC9ED0F00196701 /* Accelerate.framework in Frameworks */,
+				B4E8DA871DC9ECFD00196701 /* libNumKit.a in Frameworks */,
+				B4E8DA861DC9ECDC00196701 /* libRecKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4943BC9171808AF0071C5C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E96070190670820034884D /* NumKit.framework in Frameworks */,
+				B4D8B76518EA9F210060E7BB /* Foundation.framework in Frameworks */,
+				B4D8B76318EA9F120060E7BB /* Accelerate.framework in Frameworks */,
+				B4105F1417194EBC003E8F58 /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4988BF41A381AF6004E7CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4988C021A38275B004E7CA0 /* libRecKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B83DE019B98B170048376F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B404C4771DFA8E2600528FE9 /* NumKit.framework in Frameworks */,
+				B4B83DF019B98BD70048376F /* libRecKit.a in Frameworks */,
+				B4B83DE419B98B170048376F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DD25611946F77300CE5C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4D0F8CC19ED24B500B5731F /* Accelerate.framework in Frameworks */,
+				B4DD25721946F79F00CE5C0F /* libRecKit.a in Frameworks */,
+				B4DD25671946F77300CE5C0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E54E5B1CABBB3500808153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E54E661CABBDCC00808153 /* libNumKit.a in Frameworks */,
+				B4E54E651CABBD8400808153 /* libRecKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E6DBB015DA3EAE003FF5C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C010901C60AB4400E15BD5 /* OpenCL.framework in Frameworks */,
+				B4C0108F1C60AB3000E15BD5 /* Accelerate.framework in Frameworks */,
+				B4C0108E1C60AB2A00E15BD5 /* Foundation.framework in Frameworks */,
+				B4C0108D1C60A60700E15BD5 /* libNumKit.a in Frameworks */,
+				B4C0108C1C60A4C800E15BD5 /* libRecKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* fast_lib */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9606F190670820034884D /* NumKit.framework */,
+				B4D8B76418EA9F210060E7BB /* Foundation.framework */,
+				B4D8B76218EA9F120060E7BB /* Accelerate.framework */,
+				B46FECC518E6C6C0000CD71D /* RecKit.framework */,
+				B4105F1317194EBC003E8F58 /* OpenCL.framework */,
+				B4105EE417194295003E8F58 /* Source_misc */,
+				08FB7795FE84155DC02AAC07 /* Source_RecKit */,
+				B4C8AEF51AAECBDF003D3142 /* CL_old */,
+				B4937BBC16F05AEE0021A59E /* Dicom */,
+				B42B5E3A1CAA607B0003E6B4 /* Src_MATLAB */,
+				B4F43401145BCAE700987053 /* Src_Siemens */,
+				B4AC2A6012420A7C002BF732 /* Src_GE */,
+				B4F7AA3D1B2587910023B283 /* Src_Toshiba */,
+				08FB779DFE84155DC02AAC07 /* Resources */,
+				B4DD25651946F77300CE5C0F /* Frameworks */,
+				B4D82DB417324E5700E026EF /* Products */,
+			);
+			name = fast_lib;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source_RecKit */ = {
+			isa = PBXGroup;
+			children = (
+				B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */,
+				B4EF739A1AC52B9A00E26B45 /* Rec2DRef.m */,
+				B4EF739B1AC52B9A00E26B45 /* Rec3DRef.h */,
+				B4EF739C1AC52B9A00E26B45 /* Rec3DRef.m */,
+				B4EF739D1AC52B9A00E26B45 /* RecCoilProfile.h */,
+				B4EF739E1AC52B9A00E26B45 /* RecCoilProfile.m */,
+				B4EF739F1AC52B9A00E26B45 /* RecGridder.h */,
+				B4EF73A01AC52B9A00E26B45 /* RecGridder.m */,
+				B4EF73A11AC52B9A00E26B45 /* RecImage.h */,
+				B4EF73A21AC52B9A00E26B45 /* RecImage.m */,
+				B4EF73A41AC52B9A00E26B45 /* RecImageWarp.m */,
+				B4EF73A71AC52B9A00E26B45 /* RecKit.h */,
+				B4EF73A81AC52B9A00E26B45 /* RecLoop.h */,
+				B4EF73A91AC52B9A00E26B45 /* RecLoop.m */,
+				B4EF73AA1AC52B9A00E26B45 /* RecLoopControl.h */,
+				B4EF73AB1AC52B9A00E26B45 /* RecLoopControl.m */,
+				B4EF73AC1AC52B9A00E26B45 /* RecLoopIndex.h */,
+				B4EF73AD1AC52B9A00E26B45 /* RecLoopIndex.m */,
+				B45D447D1AE4DC3C004BBD83 /* RecList.h */,
+				B45D447E1AE4DC3C004BBD83 /* RecList.m */,
+				B4EF73AE1AC52B9A00E26B45 /* RecMatrix.h */,
+				B4EF73AF1AC52B9A00E26B45 /* RecMatrix.m */,
+				B4EF73B01AC52B9A00E26B45 /* RecNoise.h */,
+				B4EF73B11AC52B9A00E26B45 /* RecNoise.m */,
+				B4EF73B51AC52B9A00E26B45 /* RecResampler.h */,
+				B4EF73B61AC52B9A00E26B45 /* RecResampler.m */,
+				B4EF73B41AC52B9A00E26B45 /* RecResampler.cl */,
+				B48B601D1AB6D18100CA54D6 /* RecResampler.cl.h */,
+				B4EF74011AC536ED00E26B45 /* RecResampler.cl.c */,
+				B4EF73B91AC52B9A00E26B45 /* RecUtil.h */,
+				B4EF73BA1AC52B9A00E26B45 /* RecUtil.m */,
+				B4EF73BB1AC52B9A00E26B45 /* timer_macros.h */,
+			);
+			name = Source_RecKit;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B4105EE417194295003E8F58 /* Source_misc */ = {
+			isa = PBXGroup;
+			children = (
+				B48818DF100B384D003D2C3C /* libtest.m */,
+				B4C9806C11EDCB5800E241EC /* epicrec.m */,
+				B4764B451448209300FC802D /* rec.m */,
+				B478813C12F15F1D007DAE42 /* mkgrid.m */,
+				B4194D941A25B55A00E2FDE9 /* t2d.m */,
+				B4988BFD1A381B40004E7CA0 /* gMap.m */,
+				B48A67A912703E8E00620241 /* mkkernhdr.c */,
+			);
+			name = Source_misc;
+			sourceTree = "<group>";
+		};
+		B42B5E3A1CAA607B0003E6B4 /* Src_MATLAB */ = {
+			isa = PBXGroup;
+			children = (
+				B42B5E3B1CAA60A80003E6B4 /* MATLAB.h */,
+				B42B5E3C1CAA60A80003E6B4 /* MATLAB.m */,
+				B4E54E591CABBB2500808153 /* mat2ko.m */,
+			);
+			name = Src_MATLAB;
+			sourceTree = "<group>";
+		};
+		B4937BBC16F05AEE0021A59E /* Dicom */ = {
+			isa = PBXGroup;
+			children = (
+				B4223170244AD4E1006BF8DB /* instance_0.dcm */,
+				B4937BBD16F05B130021A59E /* Dicom.h */,
+				B4937BBF16F05B180021A59E /* Dicom.m */,
+				B4937BD916F07B530021A59E /* readDicom.m */,
+				B4B83DEE19B98B480048376F /* dumpDicom.m */,
+				B41AA17B19BD96F1004B9472 /* tagDictionary.plist */,
+				B472717A19BEE8E600F2CA3C /* vrDictionary.plist */,
+			);
+			name = Dicom;
+			sourceTree = "<group>";
+		};
+		B4AC2A6012420A7C002BF732 /* Src_GE */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7AA561B25887B0023B283 /* GE.h */,
+				B4F7AA571B25887B0023B283 /* GE.m */,
+				B4F7AA581B25887B0023B283 /* rdbm.11.0.h */,
+				B4F7AA591B25887B0023B283 /* slice_factor.h */,
+			);
+			name = Src_GE;
+			sourceTree = "<group>";
+		};
+		B4C8AEF51AAECBDF003D3142 /* CL_old */ = {
+			isa = PBXGroup;
+			children = (
+				B47930941AB02947008C48AA /* RecImageCL_grid_common.h */,
+				B47930951AB02947008C48AA /* RecImageCL_grid.cl */,
+				B47930961AB02947008C48AA /* RecImageCL_grid.h */,
+				B47930971AB02947008C48AA /* RecImageCL.m */,
+			);
+			name = CL_old;
+			sourceTree = "<group>";
+		};
+		B4D82DB417324E5700E026EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4D82DB317324E5700E026EF /* rec */,
+				B4D82DB717324E7C00E026EF /* readDicom */,
+				B4B25A7C174DE4F8007F2758 /* libtest */,
+				B4B25A7E174DE4F8007F2758 /* mkgrid */,
+				B4B25A7F174DE4F8007F2758 /* dump_asc */,
+				B4B25A80174DE4F8007F2758 /* RecKit.framework */,
+				B480B2FC18A361D1002C1E3E /* libRecKit.a */,
+				B4DD25641946F77300CE5C0F /* epicrec */,
+				B4B83DE319B98B170048376F /* dumpDicom */,
+				B4194D8E1A25B4F500E2FDE9 /* t2d */,
+				B4988BF71A381AF6004E7CA0 /* gMap */,
+				B4E54E5E1CABBB3500808153 /* mat2ko */,
+				B484B6071DBF44D00031F997 /* test_meas */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4DD25651946F77300CE5C0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B404C4781DFA8E7C00528FE9 /* libNumKit.a */,
+				B4912F871DC4798000FD0B65 /* libz.tbd */,
+				B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */,
+				B4D0F8CB19ED24B500B5731F /* Accelerate.framework */,
+				B4DD25661946F77300CE5C0F /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4F43401145BCAE700987053 /* Src_Siemens */ = {
+			isa = PBXGroup;
+			children = (
+				B484B60D1DBF44FA0031F997 /* test_meas.m */,
+				B4F7AA3E1B2587F40023B283 /* dump_asc.m */,
+				B4F7AA3F1B2587F40023B283 /* mdh.h */,
+				B4F7AA401B2587F40023B283 /* Siemens.h */,
+				B4F7AA411B2587F40023B283 /* Siemens.m */,
+				B4F2E0161DB768300079F6E2 /* format_memo.txt */,
+			);
+			name = Src_Siemens;
+			sourceTree = "<group>";
+		};
+		B4F7AA3D1B2587910023B283 /* Src_Toshiba */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7AA621B2594810023B283 /* Run22486.7303.04.raw.xml */,
+				B4F7AA501B2588510023B283 /* Toshiba.h */,
+				B4F7AA511B2588510023B283 /* Toshiba.m */,
+			);
+			name = Src_Toshiba;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B480B2FA18A361D1002C1E3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F7AA611B25887B0023B283 /* slice_factor.h in Headers */,
+				B4F7AA531B2588510023B283 /* Toshiba.h in Headers */,
+				B4EF73C11AC52B9A00E26B45 /* Rec3DRef.h in Headers */,
+				B4EF73BD1AC52B9A00E26B45 /* Rec2DRef.h in Headers */,
+				B4EF73CD1AC52B9A00E26B45 /* RecImage.h in Headers */,
+				B4F7AA5F1B25887B0023B283 /* rdbm.11.0.h in Headers */,
+				B4F7AA5B1B25887B0023B283 /* GE.h in Headers */,
+				B4EF73C91AC52B9A00E26B45 /* RecGridder.h in Headers */,
+				B4EF73FC1AC52B9A00E26B45 /* RecUtil.h in Headers */,
+				B4EF73C51AC52B9A00E26B45 /* RecCoilProfile.h in Headers */,
+				B4EF73EA1AC52B9A00E26B45 /* RecNoise.h in Headers */,
+				B4F7AA471B2587F40023B283 /* Siemens.h in Headers */,
+				B4EF73DE1AC52B9A00E26B45 /* RecLoopControl.h in Headers */,
+				B42B5E3E1CAA60A80003E6B4 /* MATLAB.h in Headers */,
+				B4EF73E61AC52B9A00E26B45 /* RecMatrix.h in Headers */,
+				B4F7AA451B2587F40023B283 /* mdh.h in Headers */,
+				B4EF73E21AC52B9A00E26B45 /* RecLoopIndex.h in Headers */,
+				B4EF73D81AC52B9A00E26B45 /* RecKit.h in Headers */,
+				B4EF73F41AC52B9A00E26B45 /* RecResampler.h in Headers */,
+				B4EF74001AC52B9A00E26B45 /* timer_macros.h in Headers */,
+				B480B32B18A361FA002C1E3E /* Dicom.h in Headers */,
+				B45D44801AE4DC3C004BBD83 /* RecList.h in Headers */,
+				B4EF73DA1AC52B9A00E26B45 /* RecLoop.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4943BCA171808AF0071C5C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4EF73C81AC52B9A00E26B45 /* RecGridder.h in Headers */,
+				B4EF73DD1AC52B9A00E26B45 /* RecLoopControl.h in Headers */,
+				B4EF73E51AC52B9A00E26B45 /* RecMatrix.h in Headers */,
+				B4EF73E11AC52B9A00E26B45 /* RecLoopIndex.h in Headers */,
+				B4EF73FF1AC52B9A00E26B45 /* timer_macros.h in Headers */,
+				B4EF73CC1AC52B9A00E26B45 /* RecImage.h in Headers */,
+				B4EF73FB1AC52B9A00E26B45 /* RecUtil.h in Headers */,
+				B4105F03171945A2003E8F58 /* Dicom.h in Headers */,
+				B4F7AA521B2588510023B283 /* Toshiba.h in Headers */,
+				B4EF73C01AC52B9A00E26B45 /* Rec3DRef.h in Headers */,
+				B4EF73E91AC52B9A00E26B45 /* RecNoise.h in Headers */,
+				B4F7AA5A1B25887B0023B283 /* GE.h in Headers */,
+				B4F7AA461B2587F40023B283 /* Siemens.h in Headers */,
+				B4EF73D91AC52B9A00E26B45 /* RecLoop.h in Headers */,
+				B4EF73C41AC52B9A00E26B45 /* RecCoilProfile.h in Headers */,
+				B45D447F1AE4DC3C004BBD83 /* RecList.h in Headers */,
+				B4F7AA5E1B25887B0023B283 /* rdbm.11.0.h in Headers */,
+				B4EF73D71AC52B9A00E26B45 /* RecKit.h in Headers */,
+				B4F7AA601B25887B0023B283 /* slice_factor.h in Headers */,
+				B4F7AA441B2587F40023B283 /* mdh.h in Headers */,
+				B4EF73BC1AC52B9A00E26B45 /* Rec2DRef.h in Headers */,
+				B42B5E3D1CAA60A80003E6B4 /* MATLAB.h in Headers */,
+				B4EF73F31AC52B9A00E26B45 /* RecResampler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F960486AA7600D96B5E /* libtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "libtest" */;
+			buildPhases = (
+				8DD76F990486AA7600D96B5E /* Sources */,
+				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+				8DD76F9E0486AA7600D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B48068741BE4AF2F004A9A6E /* PBXTargetDependency */,
+			);
+			name = libtest;
+			productInstallPath = "$(HOME)/bin";
+			productName = fast_lib;
+			productReference = B4B25A7C174DE4F8007F2758 /* libtest */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4194D8D1A25B4F500E2FDE9 /* t2d */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4194D921A25B4F500E2FDE9 /* Build configuration list for PBXNativeTarget "t2d" */;
+			buildPhases = (
+				B4194D8A1A25B4F500E2FDE9 /* Sources */,
+				B4194D8B1A25B4F500E2FDE9 /* Frameworks */,
+				B4194D8C1A25B4F500E2FDE9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = t2d;
+			productName = t2d;
+			productReference = B4194D8E1A25B4F500E2FDE9 /* t2d */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4764B511448218800FC802D /* rec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4764B55144821A700FC802D /* Build configuration list for PBXNativeTarget "rec" */;
+			buildPhases = (
+				B4764B4F1448218800FC802D /* Sources */,
+				B4764B501448218800FC802D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B47260E41769C064003EACAC /* PBXTargetDependency */,
+			);
+			name = rec;
+			productName = rec;
+			productReference = B4D82DB317324E5700E026EF /* rec */;
+			productType = "com.apple.product-type.tool";
+		};
+		B478810F12F15D81007DAE42 /* mkgrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B478811312F15D9F007DAE42 /* Build configuration list for PBXNativeTarget "mkgrid" */;
+			buildPhases = (
+				B478810D12F15D81007DAE42 /* Sources */,
+				B478810E12F15D81007DAE42 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mkgrid;
+			productName = mkgrid;
+			productReference = B4B25A7E174DE4F8007F2758 /* mkgrid */;
+			productType = "com.apple.product-type.tool";
+		};
+		B480B2FB18A361D1002C1E3E /* libRecKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B480B30A18A361D1002C1E3E /* Build configuration list for PBXNativeTarget "libRecKit" */;
+			buildPhases = (
+				B480B2F818A361D1002C1E3E /* Sources */,
+				B480B2F918A361D1002C1E3E /* Frameworks */,
+				B480B2FA18A361D1002C1E3E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libRecKit;
+			productName = libRecKit;
+			productReference = B480B2FC18A361D1002C1E3E /* libRecKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B484B6061DBF44D00031F997 /* test_meas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B484B60C1DBF44D00031F997 /* Build configuration list for PBXNativeTarget "test_meas" */;
+			buildPhases = (
+				B484B6031DBF44D00031F997 /* Sources */,
+				B484B6041DBF44D00031F997 /* Frameworks */,
+				B484B6051DBF44D00031F997 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test_meas;
+			productName = test_meas;
+			productReference = B484B6071DBF44D00031F997 /* test_meas */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4937BCC16F07B380021A59E /* readDicom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4937BD716F07B390021A59E /* Build configuration list for PBXNativeTarget "readDicom" */;
+			buildPhases = (
+				B4937BC916F07B380021A59E /* Sources */,
+				B4937BCA16F07B380021A59E /* Frameworks */,
+				B4937BCB16F07B380021A59E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = readDicom;
+			productName = readDicom;
+			productReference = B4D82DB717324E7C00E026EF /* readDicom */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4943BCC171808AF0071C5C8 /* RecKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4943BDF171808B00071C5C8 /* Build configuration list for PBXNativeTarget "RecKit" */;
+			buildPhases = (
+				B4943BC8171808AF0071C5C8 /* Sources */,
+				B4943BC9171808AF0071C5C8 /* Frameworks */,
+				B4943BCA171808AF0071C5C8 /* Headers */,
+				B4943BCB171808AF0071C5C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B44C548A1A3AD91D00405BE7 /* PBXTargetDependency */,
+			);
+			name = RecKit;
+			productName = RecKit;
+			productReference = B4B25A80174DE4F8007F2758 /* RecKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4988BF61A381AF6004E7CA0 /* gMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4988BFC1A381AF6004E7CA0 /* Build configuration list for PBXNativeTarget "gMap" */;
+			buildPhases = (
+				B4988BF31A381AF6004E7CA0 /* Sources */,
+				B4988BF41A381AF6004E7CA0 /* Frameworks */,
+				B4988BF51A381AF6004E7CA0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gMap;
+			productName = gMap;
+			productReference = B4988BF71A381AF6004E7CA0 /* gMap */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4B83DE219B98B170048376F /* dumpDicom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4B83DED19B98B170048376F /* Build configuration list for PBXNativeTarget "dumpDicom" */;
+			buildPhases = (
+				B4B83DDF19B98B170048376F /* Sources */,
+				B4B83DE019B98B170048376F /* Frameworks */,
+				B4B83DE119B98B170048376F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dumpDicom;
+			productName = dumpDicom;
+			productReference = B4B83DE319B98B170048376F /* dumpDicom */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4DD25631946F77300CE5C0F /* epicrec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4DD25701946F77300CE5C0F /* Build configuration list for PBXNativeTarget "epicrec" */;
+			buildPhases = (
+				B4DD25601946F77300CE5C0F /* Sources */,
+				B4DD25611946F77300CE5C0F /* Frameworks */,
+				B4DD25621946F77300CE5C0F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = epicrec;
+			productName = epicrec;
+			productReference = B4DD25641946F77300CE5C0F /* epicrec */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4E54E5D1CABBB3500808153 /* mat2ko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4E54E621CABBB3500808153 /* Build configuration list for PBXNativeTarget "mat2ko" */;
+			buildPhases = (
+				B4E54E5A1CABBB3500808153 /* Sources */,
+				B4E54E5B1CABBB3500808153 /* Frameworks */,
+				B4E54E5C1CABBB3500808153 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mat2ko;
+			productName = mat2ko;
+			productReference = B4E54E5E1CABBB3500808153 /* mat2ko */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4E6DBB215DA3EAE003FF5C4 /* dump_asc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4E6DBBF15DA3EAE003FF5C4 /* Build configuration list for PBXNativeTarget "dump_asc" */;
+			buildPhases = (
+				B4E6DBAF15DA3EAE003FF5C4 /* Sources */,
+				B4E6DBB015DA3EAE003FF5C4 /* Frameworks */,
+				B4E6DBB115DA3EAE003FF5C4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dump_asc;
+			productName = dump_asc;
+			productReference = B4B25A7F174DE4F8007F2758 /* dump_asc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				TargetAttributes = {
+					B4194D8D1A25B4F500E2FDE9 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B484B6061DBF44D00031F997 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B4988BF61A381AF6004E7CA0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B4E54E5D1CABBB3500808153 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "RecKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* fast_lib */;
+			productRefGroup = B4D82DB417324E5700E026EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B45DEA8611DC8AA80004A41B /* all */,
+				8DD76F960486AA7600D96B5E /* libtest */,
+				B478810F12F15D81007DAE42 /* mkgrid */,
+				B4764B511448218800FC802D /* rec */,
+				B4E6DBB215DA3EAE003FF5C4 /* dump_asc */,
+				B4937BCC16F07B380021A59E /* readDicom */,
+				B4943BCC171808AF0071C5C8 /* RecKit */,
+				B480B2FB18A361D1002C1E3E /* libRecKit */,
+				B4DD25631946F77300CE5C0F /* epicrec */,
+				B4B83DE219B98B170048376F /* dumpDicom */,
+				B4194D8D1A25B4F500E2FDE9 /* t2d */,
+				B4988BF61A381AF6004E7CA0 /* gMap */,
+				B4E54E5D1CABBB3500808153 /* mat2ko */,
+				B484B6061DBF44D00031F997 /* test_meas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4943BCB171808AF0071C5C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B477D1A0244EF68A00267C69 /* vrDictionary.plist in Resources */,
+				B477D19F244EF67200267C69 /* tagDictionary.plist in Resources */,
+				B44C548B1A3AD92D00405BE7 /* libRecKit.a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F990486AA7600D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48818E0100B384D003D2C3C /* libtest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4194D8A1A25B4F500E2FDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4194D961A25B55A00E2FDE9 /* t2d.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4764B4F1448218800FC802D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4764B781448223100FC802D /* rec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B478810D12F15D81007DAE42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B478816C12F16299007DAE42 /* mkgrid.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B480B2F818A361D1002C1E3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F7AA491B2587F40023B283 /* Siemens.m in Sources */,
+				B4EF73DC1AC52B9A00E26B45 /* RecLoop.m in Sources */,
+				B4EF73EC1AC52B9A00E26B45 /* RecNoise.m in Sources */,
+				B4F7AA551B2588510023B283 /* Toshiba.m in Sources */,
+				B42B5E401CAA60A80003E6B4 /* MATLAB.m in Sources */,
+				B4EF73CF1AC52B9A00E26B45 /* RecImage.m in Sources */,
+				B4F7AA5D1B25887B0023B283 /* GE.m in Sources */,
+				B4EF73C31AC52B9A00E26B45 /* Rec3DRef.m in Sources */,
+				B4EF73E41AC52B9A00E26B45 /* RecLoopIndex.m in Sources */,
+				B4EF73C71AC52B9A00E26B45 /* RecCoilProfile.m in Sources */,
+				B4EF73E81AC52B9A00E26B45 /* RecMatrix.m in Sources */,
+				B4EF73F21AC52B9A00E26B45 /* RecResampler.cl in Sources */,
+				B4EF73D31AC52B9A00E26B45 /* RecImageWarp.m in Sources */,
+				B4EF73FE1AC52B9A00E26B45 /* RecUtil.m in Sources */,
+				B4EF73F61AC52B9A00E26B45 /* RecResampler.m in Sources */,
+				B4EF73E01AC52B9A00E26B45 /* RecLoopControl.m in Sources */,
+				B4EF73BF1AC52B9A00E26B45 /* Rec2DRef.m in Sources */,
+				B4EF73CB1AC52B9A00E26B45 /* RecGridder.m in Sources */,
+				B45D44821AE4DC3C004BBD83 /* RecList.m in Sources */,
+				B480B32C18A361FE002C1E3E /* Dicom.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B484B6031DBF44D00031F997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B484B60F1DBF45040031F997 /* test_meas.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4937BC916F07B380021A59E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4937BDA16F07B530021A59E /* readDicom.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4943BC8171808AF0071C5C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F7AA481B2587F40023B283 /* Siemens.m in Sources */,
+				B4EF73DB1AC52B9A00E26B45 /* RecLoop.m in Sources */,
+				B4EF73EB1AC52B9A00E26B45 /* RecNoise.m in Sources */,
+				B4F7AA541B2588510023B283 /* Toshiba.m in Sources */,
+				B42B5E3F1CAA60A80003E6B4 /* MATLAB.m in Sources */,
+				B4EF73CE1AC52B9A00E26B45 /* RecImage.m in Sources */,
+				B4F7AA5C1B25887B0023B283 /* GE.m in Sources */,
+				B4EF73C21AC52B9A00E26B45 /* Rec3DRef.m in Sources */,
+				B4EF73E31AC52B9A00E26B45 /* RecLoopIndex.m in Sources */,
+				B4EF73C61AC52B9A00E26B45 /* RecCoilProfile.m in Sources */,
+				B4EF73E71AC52B9A00E26B45 /* RecMatrix.m in Sources */,
+				B4EF73F11AC52B9A00E26B45 /* RecResampler.cl in Sources */,
+				B4EF73D21AC52B9A00E26B45 /* RecImageWarp.m in Sources */,
+				B4EF73FD1AC52B9A00E26B45 /* RecUtil.m in Sources */,
+				B4EF73F51AC52B9A00E26B45 /* RecResampler.m in Sources */,
+				B4EF73DF1AC52B9A00E26B45 /* RecLoopControl.m in Sources */,
+				B4105F04171945A2003E8F58 /* Dicom.m in Sources */,
+				B4EF73BE1AC52B9A00E26B45 /* Rec2DRef.m in Sources */,
+				B45D44811AE4DC3C004BBD83 /* RecList.m in Sources */,
+				B4EF73CA1AC52B9A00E26B45 /* RecGridder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4988BF31A381AF6004E7CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4988BFE1A381B40004E7CA0 /* gMap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4B83DDF19B98B170048376F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B83DEF19B98B480048376F /* dumpDicom.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DD25601946F77300CE5C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4DD25711946F77E00CE5C0F /* epicrec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E54E5A1CABBB3500808153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E54E641CABBB4D00808153 /* mat2ko.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E6DBAF15DA3EAE003FF5C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C010911C60AC5500E15BD5 /* dump_asc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B418EFE318B34890005E847A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4943BCC171808AF0071C5C8 /* RecKit */;
+			targetProxy = B418EFE218B34890005E847A /* PBXContainerItemProxy */;
+		};
+		B418EFE518B34893005E847A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B480B2FB18A361D1002C1E3E /* libRecKit */;
+			targetProxy = B418EFE418B34893005E847A /* PBXContainerItemProxy */;
+		};
+		B44C548A1A3AD91D00405BE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B480B2FB18A361D1002C1E3E /* libRecKit */;
+			targetProxy = B44C54891A3AD91D00405BE7 /* PBXContainerItemProxy */;
+		};
+		B47260E41769C064003EACAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4943BCC171808AF0071C5C8 /* RecKit */;
+			targetProxy = B47260E31769C064003EACAC /* PBXContainerItemProxy */;
+		};
+		B48068741BE4AF2F004A9A6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45DEA8611DC8AA80004A41B /* all */;
+			targetProxy = B48068731BE4AF2F004A9A6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB927608733DD40010E9CD /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build",
+					/Users/oshio/Projects6/NumKit/build,
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INSTALL_PATH = $SYMROOT;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Resources/ $(HOME)/Projects6/RecKit/RecKit/build $(HOME)/Projects6/NumKit/build";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/oshio/Projects6/NumKit/build,
+				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = libtest;
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		1DEB927A08733DD40010E9CD /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CONFIGURATION_BUILD_DIR = $SYMROOT;
+				CONFIGURATION_TEMP_DIR = $SYMROOT;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Projects6/NumKit/build",
+					"$(HOME)/Projects6/RecKit/RecKit/build",
+				);
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "libRecKit-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = "";
+				GCC_WARN_UNUSED_VARIABLE = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(HOME)/Projects6/RecKit/RecKit/build",
+				);
+				INFOPLIST_FILE = "RecKit-Info.plist";
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Resources/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(HOME)/Projects6/RecKit/RecKit/build",
+					"$(HOME)/Projects6/NumKit/build",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OBJROOT = $SYMROOT;
+				ONLY_ACTIVE_ARCH = YES;
+				OPENCL_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				SDKROOT = macosx;
+				SHARED_PRECOMPS_DIR = "";
+				SYMROOT = $SYMROOT;
+				VALID_ARCHS = x86_64;
+			};
+			name = Develop;
+		};
+		B4194D931A25B4F500E2FDE9 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/oshio/Projects6/NumKit/build,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B45DEA8811DC8AA90004A41B /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "";
+				PRODUCT_NAME = all;
+			};
+			name = Develop;
+		};
+		B4764B541448218900FC802D /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/oshio/Projects6/NumKit/build,
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = rec;
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B478811212F15D81007DAE42 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/bin;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = mkgrid;
+				SDKROOT = "";
+			};
+			name = Develop;
+		};
+		B480B30B18A361D1002C1E3E /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../NumKit/build\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../NumKit/build\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B484B60B1DBF44D00031F997 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B4937BD816F07B390021A59E /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+			};
+			name = Develop;
+		};
+		B4943BDE171808B00071C5C8 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = $SYMROOT;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RecKit-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = "$(inherited)";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "@rpath/RecKit.framework/RecKit";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Resources/";
+				LIBRARY_SEARCH_PATHS = $inherited;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = $SYMROOT;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Develop;
+		};
+		B4988BFB1A381AF6004E7CA0 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build",
+					/Users/oshio/Projects6/NumKit/build,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/oshio/Projects6/NumKit/build,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B4B83DEC19B98B170048376F /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B4DD256F1946F77300CE5C0F /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "build/epicrec-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B4E54E631CABBB3500808153 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+		B4E6DBC015DA3EAE003FF5C4 /* Develop */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "$inherited @loader_path/../Resources/NumKit.framework/Resources";
+				LIBRARY_SEARCH_PATHS = $inherited;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Develop;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "libtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927608733DD40010E9CD /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "RecKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927A08733DD40010E9CD /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4194D921A25B4F500E2FDE9 /* Build configuration list for PBXNativeTarget "t2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4194D931A25B4F500E2FDE9 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B45DEA9111DC8AE30004A41B /* Build configuration list for PBXAggregateTarget "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45DEA8811DC8AA90004A41B /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4764B55144821A700FC802D /* Build configuration list for PBXNativeTarget "rec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4764B541448218900FC802D /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B478811312F15D9F007DAE42 /* Build configuration list for PBXNativeTarget "mkgrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B478811212F15D81007DAE42 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B480B30A18A361D1002C1E3E /* Build configuration list for PBXNativeTarget "libRecKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B480B30B18A361D1002C1E3E /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B484B60C1DBF44D00031F997 /* Build configuration list for PBXNativeTarget "test_meas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B484B60B1DBF44D00031F997 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4937BD716F07B390021A59E /* Build configuration list for PBXNativeTarget "readDicom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4937BD816F07B390021A59E /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4943BDF171808B00071C5C8 /* Build configuration list for PBXNativeTarget "RecKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4943BDE171808B00071C5C8 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4988BFC1A381AF6004E7CA0 /* Build configuration list for PBXNativeTarget "gMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4988BFB1A381AF6004E7CA0 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4B83DED19B98B170048376F /* Build configuration list for PBXNativeTarget "dumpDicom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4B83DEC19B98B170048376F /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4DD25701946F77300CE5C0F /* Build configuration list for PBXNativeTarget "epicrec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4DD256F1946F77300CE5C0F /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4E54E621CABBB3500808153 /* Build configuration list for PBXNativeTarget "mat2ko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4E54E631CABBB3500808153 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+		B4E6DBBF15DA3EAE003FF5C4 /* Build configuration list for PBXNativeTarget "dump_asc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4E6DBC015DA3EAE003FF5C4 /* Develop */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Develop;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
