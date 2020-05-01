@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AE</key>
+	<dict>
+		<key>Description</key>
+		<string>Application Entity</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>AS</key>
+	<dict>
+		<key>Description</key>
+		<string>Age String</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>AT</key>
+	<dict>
+		<key>Description</key>
+		<string>Attribute Tag</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>5</integer>
+	</dict>
+	<key>CS</key>
+	<dict>
+		<key>Description</key>
+		<string>Code String</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>DA</key>
+	<dict>
+		<key>Description</key>
+		<string>Date</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>DS</key>
+	<dict>
+		<key>Description</key>
+		<string>Decimal String</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>DT</key>
+	<dict>
+		<key>Description</key>
+		<string>Date Time</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>FL</key>
+	<dict>
+		<key>Description</key>
+		<string>Float</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>3</integer>
+	</dict>
+	<key>FD</key>
+	<dict>
+		<key>Description</key>
+		<string>Floating Double</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>4</integer>
+	</dict>
+	<key>IS</key>
+	<dict>
+		<key>Description</key>
+		<string>Integer String</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>LO</key>
+	<dict>
+		<key>Description</key>
+		<string>Long String</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>LT</key>
+	<dict>
+		<key>Description</key>
+		<string>Long Text (max 10240 char)</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>OB</key>
+	<dict>
+		<key>Description</key>
+		<string>Other, Byte String</string>
+		<key>Seq</key>
+		<integer>1</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>OW</key>
+	<dict>
+		<key>Description</key>
+		<string>Other, Word String</string>
+		<key>Seq</key>
+		<integer>1</integer>
+		<key>Type</key>
+		<integer>0</integer>
+	</dict>
+	<key>PN</key>
+	<dict>
+		<key>Description</key>
+		<string>Person Name</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>SH</key>
+	<dict>
+		<key>Description</key>
+		<string>Short String</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>SL</key>
+	<dict>
+		<key>Description</key>
+		<string>Signed Long</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>1</integer>
+	</dict>
+	<key>SQ</key>
+	<dict>
+		<key>Description</key>
+		<string>Sequence of Items</string>
+		<key>Seq</key>
+		<integer>1</integer>
+		<key>Type</key>
+		<integer>0</integer>
+	</dict>
+	<key>SS</key>
+	<dict>
+		<key>Description</key>
+		<string>Signed Short</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>1</integer>
+	</dict>
+	<key>ST</key>
+	<dict>
+		<key>Description</key>
+		<string>Short Text (max 1024 char)</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>TM</key>
+	<dict>
+		<key>Description</key>
+		<string>Time</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>UI</key>
+	<dict>
+		<key>Description</key>
+		<string>Unique Identifier</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>UL</key>
+	<dict>
+		<key>Description</key>
+		<string>Unsigned Long</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>1</integer>
+	</dict>
+	<key>UN</key>
+	<dict>
+		<key>Description</key>
+		<string>Unknown (Byte String)</string>
+		<key>Seq</key>
+		<integer>1</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>US</key>
+	<dict>
+		<key>Description</key>
+		<string>Unsigned Short</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>0</integer>
+	</dict>
+	<key>RT</key>
+	<dict>
+		<key>Description</key>
+		<string>Retired</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>2</integer>
+	</dict>
+	<key>na</key>
+	<dict>
+		<key>Description</key>
+		<string>Undefined length</string>
+		<key>Seq</key>
+		<integer>0</integer>
+		<key>Type</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

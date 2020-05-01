@@ -1,0 +1,107 @@
+
+Raw data format
+
+=====================================
+VA :
+	meas.asc (text) & meas.dat (mdh + frame data) x nframes
+
+=====================================
+VD : (MRE data set)
+
+Initial Info (0x2800)
+	0000 :	(int32) 0x0
+	0004 :	(int32) 0x1
+	0008 :	(int32) 0x00ae
+	000c :	(int32) 0x1ebd
+	0010 :	(int64) start_pos (0x2800)
+	0018 :	(int64) total_len (0x179c8c00)
+	...
+	0060 :	(char[]) protocol_name
+	...
+
+XML Header
+	start_pos		: (int32) header_len (0x0b60a0)
+	start_pos + 4	: (int21) n_items (6)
+	[Meas.config, xml]
+	[Dicom, xml]
+	[Meas, xml]
+	... n_items
+	...
+
+Actual Data
+	start_pos + header_len : (0x0b88a0)
+	{
+		ScanHeader (0xc0 bytes, was MDH before)
+		{
+			ChannelHeader (0x20 bytes)
+			[one frame of data]
+			ChannelHeader
+			[one frame of data]
+			...
+		}
+		ScanHeader
+		{
+			ChannelHeader (32 bytes)
+			[one frame of data]
+			ChannelHeader
+			[one frame of data]
+			...
+		}
+		...
+	}
+
+EOF : start_pos + total_len
+
+=====================================
+VB : (Oshio fMRI set) : tentative ver name:VB_single (maybe related to single channel data)
+
+No Initial Info
+	start_pos = 0
+
+XML Header
+	start_pos		: (int32) header_len (0x0889c0)
+	start_pos + 4	: (int21) n_items (6)
+	[Meas.config, xml]
+	[Dicom, xml]
+	[Meas, xml]
+	... n_items
+	...
+	
+Actual Data
+	start_pos + header_len : (0x0889c0)
+	{
+		MDH (0x80 bytes)
+		[one frame of data]
+		MDH
+		[one frame of data]
+		...
+	}
+
+EOF : (no total_len info in header)
+
+=====================================
+VB : (resting state set) : tentative ver name:VB_mult
+
+Read "Meas Yaps"
+
+####
+
+No Initial Info
+	start_pos = 0
+
+XML Header
+	start_pos		: (int32) header_len (0x0889c0)
+	start_pos + 4	: (int21) n_items (6)
+	
+Actual Data
+	start_pos + header_len : (0x0889c0)
+	{
+		MDH (0x80 bytes)
+		[one frame of data]
+		MDH
+		[one frame of data]
+		...
+	}
+
+EOF : (no total_len info in header)
+

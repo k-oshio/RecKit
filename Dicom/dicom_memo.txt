@@ -1,0 +1,26 @@
+
+file meta : defines endian and explicit VR
+
+PS 3.5 p26
+
+=== Explicit VR
+	Tag (short, short)
+	VR "SQ" etc
+	Value length (short)
+	Value field ("value length" bytes)
+
+=== Explicit VR (OB, OW, SQ or UN)
+	Tag (short, short)
+	VR "SQ" etc
+	Reserved (short, 00000)
+	Value length (long)
+	Value field ("value length" bytes)
+
+=== Explicit VR (Delimiter)
+	Tag (short, short)
+	Value length (long)
+
+=== Inplicit VR)
+	Tag (short, short)
+	Value length (long)
+	Value field ("value length" bytes)
