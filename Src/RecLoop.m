@@ -113,7 +113,7 @@ NSMutableDictionary	*loopDict;
 
 - (id)copyWithZone:(NSZone *)zone
 {
-	RecLoop	*lp = [[self class] alloc];
+	RecLoop	*lp = [[self class] alloc]; // 5-4
 
 	lp = [lp initWithName:@"" dataLength:[self dataLength]];
     if (lp) {
