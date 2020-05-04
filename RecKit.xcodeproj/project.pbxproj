@@ -68,6 +68,7 @@
 		B4C010901C60AB4400E15BD5 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
 		B4C010911C60AC5500E15BD5 /* dump_asc.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F7AA3E1B2587F40023B283 /* dump_asc.m */; };
 		B4C10AF718EBE35B008F75E3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76218EA9F120060E7BB /* Accelerate.framework */; };
+		B4C4190324600771002C5E5E /* RecKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4C4190224600771002C5E5E /* RecKit-Info.plist */; };
 		B4D0F8CC19ED24B500B5731F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D0F8CB19ED24B500B5731F /* Accelerate.framework */; };
 		B4D8B76318EA9F120060E7BB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76218EA9F120060E7BB /* Accelerate.framework */; };
 		B4D8B76518EA9F210060E7BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D8B76418EA9F210060E7BB /* Foundation.framework */; };
@@ -320,6 +321,7 @@
 		B4B25A80174DE4F8007F2758 /* RecKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B83DE319B98B170048376F /* dumpDicom */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dumpDicom; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B83DEE19B98B480048376F /* dumpDicom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dumpDicom.m; path = Dicom/dumpDicom.m; sourceTree = "<group>"; };
+		B4C4190224600771002C5E5E /* RecKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RecKit-Info.plist"; sourceTree = "<group>"; };
 		B4C9806C11EDCB5800E241EC /* epicrec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = epicrec.m; sourceTree = "<group>"; };
 		B4D0F8CB19ED24B500B5731F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		B4D82DB317324E5700E026EF /* rec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rec; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -584,6 +586,7 @@
 				B4194D941A25B55A00E2FDE9 /* t2d.m */,
 				B4988BFD1A381B40004E7CA0 /* gMap.m */,
 				B48A67A912703E8E00620241 /* mkkernhdr.c */,
+				B4C4190224600771002C5E5E /* RecKit-Info.plist */,
 			);
 			name = Source_misc;
 			sourceTree = "<group>";
@@ -1042,6 +1045,7 @@
 			files = (
 				B477D1A0244EF68A00267C69 /* vrDictionary.plist in Resources */,
 				B477D19F244EF67200267C69 /* tagDictionary.plist in Resources */,
+				B4C4190324600771002C5E5E /* RecKit-Info.plist in Resources */,
 				B44C548B1A3AD92D00405BE7 /* libRecKit.a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
