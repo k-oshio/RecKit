@@ -521,6 +521,7 @@ void histogram(float *hst, int nbin, float *p, int ndata, float mn, float mx);
 - (void)pFOV:(float)pf;
 - (void)fft2d:(int)dir;						// in-place 2D FFT
 - (void)fft3d:(int)dir;						// in-place 3D FFT
+// self, src are not altered
 - (RecImage *)xCorrelationWith:(RecImage *)img   width:(float)w triFilt:(BOOL)flt;
 - (RecImage *)yCorrelationWith:(RecImage *)img   width:(float)w triFilt:(BOOL)flt;
 - (RecImage *)xyCorrelationWith:(RecImage *)img  width:(float)w triFilt:(BOOL)flt;

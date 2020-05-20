@@ -5669,6 +5669,7 @@ printf("not done yet\n");
     return img2;	// scale ??? max != 1.0 ###
 }
 
+// self, src are not altered
 - (RecImage *)xCorrelationWith:(RecImage *)src width:(float)w triFilt:(BOOL)flt
 {
 	RecImage		*img1, *img2;			// complex
