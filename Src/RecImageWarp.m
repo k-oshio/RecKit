@@ -665,7 +665,7 @@
 	return img;
 }
 
-// ### not done yet (1-24)
+// self, param is not altered
 // unit: pixels
 - (RecImage *)ftShift1d:(RecLoop *)lp by:(RecImage *)param // FFT based shift without making map
 {
