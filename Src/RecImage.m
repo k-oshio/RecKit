@@ -2386,8 +2386,12 @@ typedef struct {
 
     wt = (float *)malloc(sizeof(float) * len);
     for (i = 0; i < len; i++) {
-        x = (float)i;
-		if (x > w && x < len - w) {
+        if (i < len/2) {
+            x = (float)i;
+        } else {
+            x = (float)len - i;
+        }
+		if (x > w) {
 			wt[i] = 1.0;
 		} else {
 			wt[i] = 0.5 - 0.5 * cos((float)x / w * M_PI);
