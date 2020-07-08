@@ -4544,6 +4544,36 @@ printf("not done yet\n");
     }
 }
 
+- (RecImage *)makeColorWithR:(RecImage *)r G:(RecImage *)g B:(RecImage *)b
+{
+    float       *p, *q;
+    int         i, n = [g dataLength];
+    RecImage    *img = [RecImage imageOfType:RECIMAGE_COLOR withImage:g];
+
+    if (r) {
+        p = [r data];
+        q = [img r];
+        for (i = 0; i < n; i++) {
+            q[i] = p[i];
+        }
+    }
+    if (g) {
+        p = [g data];
+        q = [img g];
+        for (i = 0; i < n; i++) {
+            q[i] = p[i];
+        }
+    }
+    if (b) {
+        p = [b data];
+        q = [img b];
+        for (i = 0; i < n; i++) {
+            q[i] = p[i] * 2;
+        }
+    }
+    return img;
+}
+
 - (RecImage *)toDipole
 {
     RecImage    *x, *y;

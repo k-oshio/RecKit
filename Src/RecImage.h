@@ -220,6 +220,7 @@ extern BOOL		fft_dbg;	// 0:unit check off, 1:unit check on
 - (void)removeImagPart; // remove imag part, keep complex type
 //- (void)copyRealOf:(RecImage *)img;	// copy real part of img to imag of self -> makeComplexWithIm
 //- (void)copyImagOf:(RecImage *)img;	// copy imag part of img to real of self
+- (RecImage *)makeColorWithR:(RecImage *)r G:(RecImage *)g B:(RecImage *)b;
 - (void)setRealToZero;
 - (void)magnitude;		// take magnitude, and remove imag part
 - (void)phase;			// take phase, and remove imag part
