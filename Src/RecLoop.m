@@ -188,7 +188,7 @@ NSMutableDictionary	*loopDict;
 	return dataLength;
 }
 
-- (void)setCenterPos:(int)ct
+- (void)setCenter:(int)ct
 {
 	center = ct;
 }

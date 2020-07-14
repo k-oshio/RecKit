@@ -541,7 +541,7 @@ void histogram(float *hst, int nbin, float *p, int ndata, float mn, float mx);
 
 // NCI
 - (RecImage *)toDipole;
-- (RecImage *)toQuatrupole;
+- (RecImage *)toQuadrupole;
 
 // geometric
 - (void)dilate2d;
