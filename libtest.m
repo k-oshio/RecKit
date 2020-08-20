@@ -94,7 +94,7 @@ main()
 //  test11();   // freq domain filter
 //	test12();   // SCIC
 //	test13();   // tri filter
-  test14();   // Dicom
+//  test14();   // Dicom
 //	test15();   // ImageRef (2D and 3D)
 //	test16();	// test image gen (color space)
 //	test17();	// half-fourier
@@ -114,7 +114,7 @@ main()
 //	test31();	// chebychev (1d, 2d)
 //	test32();	// trig interp
 //	test33();	// complex interp
-//	test34();	// unwrap
+	test34();	// unwrap
 //	test35();	// Laplacian-base unwrap (complex version)
 //	test36();	// wavelet
 //	test37();	// phase SNR
@@ -1757,7 +1757,7 @@ test20()
 //	q = p + [img dataLength];
 
 // 1D
-	if (1) {
+	if (0) {
 		for (i = 0; i < xDim; i++) {
 			pp[i] = (float)(i - xDim/2) * (i - xDim/2) / xDim;
 		}
@@ -1773,6 +1773,23 @@ test20()
 		}
 	}
 
+	// RecImage method
+	if (1) {
+		RecImage	*img = [RecImage imageOfType:RECIMAGE_REAL xDim:64 yDim:64];
+		RecImage	*coef;
+		float		*p;
+		int			i, j;
+		
+		p = [img data];
+		for (i = 16; i < 48; i++) {
+			for (j = 16; j < 48; j++) {
+				p[i * 64 + j] = 1.0;
+			}
+		}
+		coef = [img dct1d:[img xLoop] order:20];
+		[coef saveAsKOImage:@"../test_img/test_20.img"];
+		exit(0);
+	}
 // 2D
 	coef[0] = 0.1; coef[1] = 0.2; coef[2] = 0.3;
 	coef[3] = 0.4; coef[4] = 0.5; coef[5] = 0.6;
@@ -2981,7 +2998,9 @@ mk_phsphantom(int dim, float a, float nz)
 int
 test34()
 {
-	RecImage	*img, *phs;
+	RecImage	*img, *phs, *mask;
+	RecImage	*avg, *blk;
+	RecLoop		*blkLp, *avgLp;
 //	extern		BOOL unwrap_dbg;
 	float		mx, sd;
 system("rm IMG_*.*");
@@ -2993,21 +3012,52 @@ system("rm IMG_*.*");
 //	img = [RecImage imageWithKOImage:@"../test_img/b500-test-cpx-0"];//	img = [img sliceAtIndex:5];	// 0 , 5
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-rinkan-1024/b500.img"];	img = [img sliceAtIndex:40];
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/img.img"];	img = [img sliceAtIndex:618];	// 105, 618
-
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-rinkan-4/b200-cor-si/img1.cpx"];
-	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-rinkan-5/b200-sag-si-1/img1.cpx"];	// multi-slice
-
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-rinkan-5/b200-sag-si-1/img1.cpx"];	// multi-slice
 //	img = [RecImage imageWithKOImage:@"/Users/oshio/Math/phase-unwrap/IMG.img"];	//### convert old KO_IMAGE to RecImage
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-ax-si/img0.cpx"];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-si/img0.cpx"];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-lr/img0.cpx"];
+	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-ap/img0.cpx"];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62547/b200-cor-si/img0.cpx"];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62548/b1000-cor-si/img0.cpx"];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62549/b1000-cor-si/img0.cpx"];
 
-	[img cropToPo2:[img xLoop]];
-	[img cropToPo2:[img yLoop]];
-	// 5
-	[img saveAsKOImage:@"IMG_34_in.img"];
+	[img saveAsKOImage:@"../test_img/IMG_34_in.img"];
+// crop
+	if (0) {
+		[img crop:[img xLoop] to:32];
+		[img crop:[img yLoop] to:32 startAt:10];
+		[img saveAsKOImage:@"../test_img/IMG_34_crop.img"];
+	}
+	phs = [img copy];
+	[phs phase];
+	
+	mask = [img avgForLoop:[img zLoop]];
+	[mask magnitude];
+	[mask thresAt:0.01];
+	[mask saveAsKOImage:@"../test_img/IMG_34_mask.img"];
+	
+	
+
 
 //[img phsNoiseFilt:2.0];
-//	phs = [img unwrap2d];	// not perfect, but works
-	phs = [img unwrap2d_lap];
-	[phs saveAsKOImage:@"IMG_34_out.img"];
+	phs = [img unwrap2d];	// not perfect, but works
+							// -> add zloop chk
+//	phs = [img unwrap2d_lap];	// not working yet
+//	[phs unwrap1dForLoop:[phs yLoop]];	// 1D phase unwrap (uses Rec_unwrap_1d)
+	if (0) {
+		[phs multByImage:mask];
+	}
+	[phs saveAsKOImage:@"../test_img/IMG_34_out.img"];
+
+	blkLp = [RecLoop loopWithDataLength:2];
+	avgLp = [RecLoop loopWithDataLength:[phs zDim]/2];
+	avg = [RecImage imageOfType:RECIMAGE_REAL withLoops:blkLp, avgLp, [phs yLoop], [phs xLoop], nil];
+	[avg copyImageData:phs];
+//	avg = [phs avgForLoop:[phs zLoop]];
+	avg = [avg avgForLoop:avgLp];
+	[avg saveAsKOImage:@"../test_img/IMG_34_pavg.img"];
 	
 	return 0;
 }

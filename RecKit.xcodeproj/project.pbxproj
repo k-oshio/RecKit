@@ -84,6 +84,8 @@
 		B4E8DA871DC9ECFD00196701 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
 		B4E8DA881DC9ED0F00196701 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D0F8CB19ED24B500B5731F /* Accelerate.framework */; };
 		B4E8DA891DC9ED2F00196701 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4105F1317194EBC003E8F58 /* OpenCL.framework */; };
+		B4E9064624DC104C00AC4083 /* RecImageUnwrap.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E9064524DC104C00AC4083 /* RecImageUnwrap.m */; };
+		B4E9064724DC108B00AC4083 /* RecImageUnwrap.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E9064524DC104C00AC4083 /* RecImageUnwrap.m */; };
 		B4E96070190670820034884D /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
 		B4EF73BC1AC52B9A00E26B45 /* Rec2DRef.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4EF73BD1AC52B9A00E26B45 /* Rec2DRef.h in Headers */ = {isa = PBXBuildFile; fileRef = B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */; };
@@ -332,6 +334,7 @@
 		B4DD25661946F77300CE5C0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B4E54E591CABBB2500808153 /* mat2ko.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = mat2ko.m; path = Src_MATLAB/mat2ko.m; sourceTree = "<group>"; };
 		B4E54E5E1CABBB3500808153 /* mat2ko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mat2ko; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E9064524DC104C00AC4083 /* RecImageUnwrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecImageUnwrap.m; path = Src/RecImageUnwrap.m; sourceTree = "<group>"; };
 		B4E9606F190670820034884D /* NumKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NumKit.framework; path = ../../NumKit/build/NumKit.framework; sourceTree = "<group>"; };
 		B4EF73991AC52B9A00E26B45 /* Rec2DRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rec2DRef.h; path = Src/Rec2DRef.h; sourceTree = "<group>"; };
 		B4EF739A1AC52B9A00E26B45 /* Rec2DRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rec2DRef.m; path = Src/Rec2DRef.m; sourceTree = "<group>"; };
@@ -544,6 +547,7 @@
 				B4EF73A11AC52B9A00E26B45 /* RecImage.h */,
 				B4EF73A21AC52B9A00E26B45 /* RecImage.m */,
 				B4EF73A41AC52B9A00E26B45 /* RecImageWarp.m */,
+				B4E9064524DC104C00AC4083 /* RecImageUnwrap.m */,
 				B4EF73A71AC52B9A00E26B45 /* RecKit.h */,
 				B4EF73A81AC52B9A00E26B45 /* RecLoop.h */,
 				B4EF73A91AC52B9A00E26B45 /* RecLoop.m */,
@@ -1058,6 +1062,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48818E0100B384D003D2C3C /* libtest.m in Sources */,
+				B4E9064624DC104C00AC4083 /* RecImageUnwrap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,6 +1156,7 @@
 				B4105F04171945A2003E8F58 /* Dicom.m in Sources */,
 				B4EF73BE1AC52B9A00E26B45 /* Rec2DRef.m in Sources */,
 				B45D44811AE4DC3C004BBD83 /* RecList.m in Sources */,
+				B4E9064724DC108B00AC4083 /* RecImageUnwrap.m in Sources */,
 				B4EF73CA1AC52B9A00E26B45 /* RecGridder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

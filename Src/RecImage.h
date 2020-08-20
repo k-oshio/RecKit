@@ -493,6 +493,7 @@ void histogram(float *hst, int nbin, float *p, int ndata, float mn, float mx);
 // DCT
 - (void)dct1d:(RecLoop *)lp; // for entire image
 - (void)dct2d;
+- (RecImage *)dct1d:(RecLoop *)lp order:(int)odr;
 
 // Wavelet (not implemented yet)
 - (void)wave1d:(RecLoop *)lp level:(int)lv direction:(int)dir;

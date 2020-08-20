@@ -268,7 +268,7 @@ printf("mean phase = %f\n", mx);
 
 
 
-exit(0);
+//exit(0);
 
 	return ph1;
 }
@@ -351,17 +351,50 @@ exit(0);
 - (RecImage *)unwrap2d
 {
 	RecImage	*cpx, *phs;		// single slice
+    RecImage    *tmp, *slc; // ### fix var name etc later
+    float       *p;
 	RecImage	*res;			// result, real, multi-slice
+    RecImage    *mask;          // mag + variance
 	int			i, nSlice = [self zDim];
+
 
 	res = [RecImage imageOfType:RECIMAGE_REAL withImage:self];
 	for (i = 0; i < nSlice; i++) {
 		cpx = [self sliceAtIndex:i];
-	//	phs = [cpx unwrap2d_block];			// 2 (try LPF)
+		phs = [cpx unwrap2d_block];			// 2 (try LPF)
 	//	phs = [cpx unwrap2d_block_2];		// 3
-		phs = [cpx unwrap2d_block_rec];		// currently best, but with LPF. update rel etc according to block1
+	//	phs = [cpx unwrap2d_block_rec];		// currently best, but with LPF. update rel etc according to block1
 		[res copySlice:phs atIndex:i];
 	}
+ 
+    // remove slice-to-slice jump
+    mask = [self avgForLoop:[self zLoop]];
+    [mask thresAt:0.1];
+    phs = [self copy];
+    [phs phase];
+    phs = [phs varForLoop:[phs zLoop]];
+    [phs thresAt:0.1];
+    [phs addConst:-1.0];
+    [phs negate];
+    [mask multByImage:phs];
+    phs = [res copy];
+    [phs multByImage:mask];
+    phs = [phs avgForLoop:[phs xLoop]];
+    phs = [phs avgForLoop:[phs xLoop]];
+    [phs mod2PI];
+    p = [phs data];
+    
+// ok upto here ...
+    tmp = [RecImage imageOfType:RECIMAGE_REAL withImage:self];
+    [tmp setConst:1.0];
+//    [tmp multByImage:phs];  // this doesn't work because phs doesn't have xLoop
+    for (i = 0; i < nSlice; i++) {
+        slc = [tmp sliceAtIndex:i];
+        [slc multByConst:p[i]];
+        [tmp copySlice:slc atIndex:i];
+    }
+    [res subImage:tmp];
+
 	return res;
 }
 
@@ -1640,7 +1673,7 @@ calc_r_4(RecImage *tiles, int t2)
 	int			i, j, n;
 	int			ii, jj;
 	int			ix;
-	int			siz = 4;
+	int			siz = 4;    // 4
 	int			xDim = [self xDim];
 //	int			yDim = [self yDim];
 	float		*p1, *p2, val;

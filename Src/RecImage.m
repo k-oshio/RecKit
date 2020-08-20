@@ -1656,19 +1656,29 @@ typedef struct {
 - (RecImage *)cpxDivImage:(RecImage *)img	// self /= img (src:img, dst:self)
 {
     void    (^proc)(float *srcp, float *srcq, int srcSkip, float *dstp, float *dstq, int dstSkip, int len);
-
     proc = ^void(float *srcp, float *srcq, int srcSkip, float *dstp, float *dstq, int dstSkip, int len) {
 		DSPSplitComplex	A, B;	// A /= B
-		int		i;
+		int		i, ix;
+        float   mg;
 
 		B.realp = srcp;
 		B.imagp = srcq;
 		A.realp = dstp;
 		A.imagp = dstq;
+  
+        // add zero-check ####
+        for (i = 0; i < len; i++) {
+            ix = i * srcSkip;
+            mg = srcp[ix] * srcp[ix] + srcq[ix] * srcq[ix];
+            if (mg == 0) {
+                dstp[i*dstSkip] = dstq[i*dstSkip] = 0;
+            }
+        }
+
         vDSP_zvdiv(&B, srcSkip, &A, dstSkip, &A, dstSkip, len);   // actual processing
 		for (i = 0; i < len; i++) {
-			dstp[i] = A.realp[i];
-			dstq[i] = A.imagp[i];
+			dstp[i*dstSkip] = A.realp[i*srcSkip];
+			dstq[i*dstSkip] = A.imagp[i*srcSkip];
 		}
     };
     // src is img, dst is self
@@ -3573,7 +3583,7 @@ exit(0);
 	lc = [self control];	// dst
 	srcLc = [img controlWithControl:lc];
 	len = [self xDim];
-	[lc deactivateInner];	// ???? ###
+	[lc deactivateInner];	// == deactivateX
 	
 	[lc rewind];
 	loopLength = [lc loopLength];
@@ -5340,7 +5350,7 @@ printf("not done yet\n");
 
 // DCT
 // not done yet #####
-- (void)dct1d:(RecLoop *)lp // for entire image
+- (void)dct1dX:(RecLoop *)lp // for entire image
 {
 	vDSP_DFT_Setup		setup;
 	vDSP_Length         len;
@@ -5376,13 +5386,48 @@ printf("not done yet\n");
 		}
 		[lc increment];
 	}
+    // crop
+    //    [self replaceLoop:newLp withLoop:lp offset:-20];    // original lp
 
-// crop
-//	[self replaceLoop:newLp withLoop:lp offset:-20];	// original lp
-
-	free(src);
-	free(dst);
+    free(src);
+    free(dst);
 }
+
+// DCT (new version)(slow)
+- (RecImage *)dct1d:(RecLoop *)lp order:(int)odr // for entire image
+{
+    RecDctSetup     *setup;
+    RecImage        *coef;
+    float           *p, *q;
+    RecLoop         *cLp;
+    RecLoopControl  *srcLc, *dstLc;
+    int             i, loopLen;
+    int             srcSkip, dstSkip;
+    int             dim;
+
+    dim = [lp dataLength];
+    coef = [RecImage imageWithImage:self];
+    cLp = [coef crop:lp to:odr];
+
+    setup = Rec_dct_setup(dim, odr);
+    srcLc = [self control];
+    dstLc = [coef controlWithControl:srcLc];
+    srcSkip = [self skipSizeForLoop:lp];
+    dstSkip = [coef skipSizeForLoop:cLp];
+    
+    [srcLc deactivateLoop:lp];
+    loopLen = [srcLc loopLength];
+    for (i = 0; i < loopLen; i++) {
+        p = [self currentDataWithControl:srcLc];
+        q = [coef currentDataWithControl:dstLc];
+        Rec_dct_1d(p, srcSkip, q, dstSkip, setup, REC_INVERSE);
+        [srcLc increment];
+    }
+    Rec_free_dct_setup(setup);
+
+    return coef;
+}
+
 
 - (void)dct2d
 {
