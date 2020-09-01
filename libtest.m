@@ -66,6 +66,7 @@ int test37(void);
 int test38(void);
 int test39(void);
 int test40(void);
+int test45(void);
 
 int
 main()
@@ -114,7 +115,7 @@ main()
 //	test31();	// chebychev (1d, 2d)
 //	test32();	// trig interp
 //	test33();	// complex interp
-	test34();	// unwrap
+//	test34();	// unwrap
 //	test35();	// Laplacian-base unwrap (complex version)
 //	test36();	// wavelet
 //	test37();	// phase SNR
@@ -125,7 +126,7 @@ main()
 //	test42();	// Rician correction
 //	test43();	// DICOM / Canon scaling
 //	test44();	// pinwheel test
-//	test45();	// s-transform
+	test45();	// s-transform
 
 	return 0;
 } // autoreleasepool

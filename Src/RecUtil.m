@@ -2146,6 +2146,21 @@ Rec_dft(RecDftSetup *setup, DSPSplitComplex *src, int src_skip, int direction)
 	}
 }
 
+// DST (discrete s-transform), uses dftsetup
+RecImage *
+Rec_dst(RecDftSetup *setup, float *src, int src_skip)
+{
+    RecImage    *img;
+
+    return img;
+}
+
+// IDST (inverse discrete s-transform)
+void
+Rec_idst(RecDftSetup *setup, RecImage *src, float *dst, int dst_skip)
+{
+}
+
 // ### debug
 void
 dump_array(DSPSplitComplex ptr, int len)
