@@ -3627,22 +3627,28 @@ test45()
 	int			x, f;		// position, frequency
 	float		w, fxi;
 	float		er, ei, th;
+	int			xx, yy;
 
 	printf("S-transform\n");
-	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/Run62547/b200-cor-si/img0.cpx"];
-	[img phase];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/Run62547/b200-cor-si/img0.cpx"]; xx = 35; yy = 21;
+	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-5/4V/img0.phs"]; xx = 62; yy = 81; //75;
+	if ([img type] == RECIMAGE_COMPLEX) {
+		[img phase];
+	}
 	n = [img zDim];
 	dim = [img xDim];
 	tser = [RecImage imageOfType:RECIMAGE_REAL xDim:n];
-
+	printf("n = %d\n", n);
 	// generate test input
 	if (1) {
+		n = 256;
+		tser = [RecImage imageOfType:RECIMAGE_REAL xDim:n];
 		pp = [tser data];
 		for (i = 0; i < n; i++) {
-			th = (float)i * i * 0.2 * M_PI / n;
+			th = (float)i * i * 0.8 * M_PI / n;
 		//	th = 0.5 * i;
 			pp[i] = sin(th);
-			printf("%d %f\n", i, pp[i]);
+		//	printf("%d %f\n", i, pp[i]);
 		}
 	} else {
 	// copy input time series
@@ -3650,47 +3656,55 @@ test45()
 		pp = [tser data];
 		skip = [img skipSizeForLoop:[img zLoop]];
 		for (i = 0; i < n; i++) {
-			ix = 21 * dim + 35 + i * skip;
+			ix = yy * dim + xx + i * skip;
 			pp[i] = p[ix];
 		//	printf("%d %f\n", i, q[i]);
 		}
 	}
 
-// kernel test
-/*
-	f = 50;
-	x = 130;
-	for (i = 0; i < n; i++) {
-		fxi = f * (float)(x - i) / n / k;
-		w = (float)abs(f) / (k * n * sqrt(2 * M_PI)) * exp(-0.5 * fxi * fxi);
-		th = 2 * M_PI * i * f / n;
-		er = cos(th);
-		ei = sin(th);
-		printf("%d %f %f\n", i, w * er, w * ei);
-	}
-*/
+	[tser saveAsKOImage:@"IMG.in"];
+	if (1) {
+		strans = Rec_dst(tser);
+		[strans saveAsKOImage:@"IMG.str"];
+	} else {
 
-	// S transform
-	strans = [RecImage imageOfType:RECIMAGE_COMPLEX xDim:n yDim:n];
-	p = [strans real];
-	q = [strans imag];
-	pp = [tser data];
 
-	for (f = 0; f < n; f++) {
-		for (x = 0; x < n; x++) {
-			for (i = 0; i < n; i++) {
-				fxi = f * (float)(x - i) / n / k;
-				w = (float)abs(f) / (k * n * sqrt(2 * M_PI)) * exp(-0.5 * fxi * fxi);
-				th = 2 * M_PI * i * f / n;
-				er = cos(th);
-				ei = sin(th);
-			//	printf("%d %f %f\n", i, w * er, w * ei);
-				p[f * n + x] += pp[i] * w * er;
-				q[f * n + x] += pp[i] * w * ei;
+	// kernel test
+	/*
+		f = 50;
+		x = 130;
+		for (i = 0; i < n; i++) {
+			fxi = f * (float)(x - i) / n / k;
+			w = (float)abs(f) / (k * n * sqrt(2 * M_PI)) * exp(-0.5 * fxi * fxi);
+			th = 2 * M_PI * i * f / n;
+			er = cos(th);
+			ei = sin(th);
+			printf("%d %f %f\n", i, w * er, w * ei);
+		}
+	*/
+
+		// S transform
+		strans = [RecImage imageOfType:RECIMAGE_COMPLEX xDim:n yDim:n];
+		p = [strans real];
+		q = [strans imag];
+		pp = [tser data];
+
+		for (f = 0; f < n; f++) {
+			for (x = 0; x < n; x++) {
+				for (i = 0; i < n; i++) {
+					fxi = f * (float)(x - i) / n / k;
+					w = (float)abs(f) / (k * n * sqrt(2 * M_PI)) * exp(-0.5 * fxi * fxi);
+					th = 2 * M_PI * i * f / n;
+					er = cos(th);
+					ei = sin(th);
+				//	printf("%d %f %f\n", i, w * er, w * ei);
+					p[f * n + x] += pp[i] * w * er;
+					q[f * n + x] += pp[i] * w * ei;
+				}
 			}
 		}
+		[strans saveAsKOImage:@"IMG.str"];
 	}
-	[strans saveAsKOImage:@"IMG.str"];
 
 	return 0;
 }

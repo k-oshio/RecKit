@@ -181,9 +181,9 @@ RecDftSetup	*Rec_dftsetup(int len);
 void		Rec_dft(RecDftSetup *setup, DSPSplitComplex *src, int src_skip, int direction);
 void		Rec_destroy_dftsetup(RecDftSetup *setup);
 
-// DST (discrete s-transform), uses dftsetup
-RecImage    *Rec_dst(RecDftSetup *setup, float *src, int src_skip);
-void        Rec_idst(RecDftSetup *setup, RecImage *src, float *dst, int dst_skip);
+// DST (discrete s-transform)
+RecImage    *Rec_dst(RecImage *src);	// src is 1D, dst is 1D
+RecImage	*Rec_idst(RecImage *src);	// src is 2D, dst is 1D
 
 // Chirp-Z
 RecCftSetup	*Rec_cftsetup(int len);

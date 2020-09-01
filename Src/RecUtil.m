@@ -2148,17 +2148,57 @@ Rec_dft(RecDftSetup *setup, DSPSplitComplex *src, int src_skip, int direction)
 
 // DST (discrete s-transform), uses dftsetup
 RecImage *
-Rec_dst(RecDftSetup *setup, float *src, int src_skip)
+Rec_dst(RecImage *src)	// src is 1D image
 {
-    RecImage    *img;
+    RecImage    *img, *tmp;
+    int			i, j, ii, jj, k, n;
+    float		*p1, *q1;
+    float		*p2, *q2;
+    float		w;
+
+[src saveAsKOImage:@"IMG_in"];
+	n = [src xDim];
+	tmp = [src copy];
+	[tmp shift1d:[tmp xLoop]];	// make no shift fft !!!
+	[tmp fft1d:[tmp xLoop] direction:REC_INVERSE];
+	[tmp shift1d:[tmp xLoop]];	// make no shift fft !!!
+[tmp saveAsKOImage:@"IMG_ft"];
+
+	img = [RecImage imageOfType:RECIMAGE_COMPLEX xDim:n yDim:n];
+	p1 = [tmp real]; q1 = [tmp imag];
+	p2 = [img real]; q2 = [img imag];
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			k = (i + j) % n;
+			if (i == 0) {
+				if (j == 0) {
+					w = 1.0;
+				} else {
+					w = 0.0;
+				}
+			} else {
+				w = exp(- 2 * M_PI * M_PI * j * j / (i * i));
+			}
+			p2[i * n + j] = p1[k] * w;
+			q2[i * n + j] = q1[k] * w;
+		}
+	}
+	[img shift1d:[img xLoop]];
+	[img fft1d:[img xLoop] direction:REC_FORWARD];
+	[img shift1d:[img xLoop]];
+
+printf("s-trans ... not done yet\n");
 
     return img;
 }
 
 // IDST (inverse discrete s-transform)
-void
-Rec_idst(RecDftSetup *setup, RecImage *src, float *dst, int dst_skip)
+RecImage *
+Rec_idst(RecImage *src)
 {
+	RecImage *img;
+
+	return img;
 }
 
 // ### debug
