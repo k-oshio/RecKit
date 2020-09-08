@@ -2151,18 +2151,17 @@ RecImage *
 Rec_dst(RecImage *src)	// src is 1D image
 {
     RecImage    *img, *tmp;
-    int			i, j, ii, jj, k, n;
+    int			i, j, k, n;
     float		*p1, *q1;
     float		*p2, *q2;
     float		w;
 
-[src saveAsKOImage:@"IMG_in"];
+//[src saveAsKOImage:@"IMG_in"];
 	n = [src xDim];
 	tmp = [src copy];
 	[tmp shift1d:[tmp xLoop]];	// make no shift fft !!!
-	[tmp fft1d:[tmp xLoop] direction:REC_INVERSE];
+    [tmp fft1d:[tmp xLoop] direction:REC_FORWARD];
 	[tmp shift1d:[tmp xLoop]];	// make no shift fft !!!
-[tmp saveAsKOImage:@"IMG_ft"];
 
 	img = [RecImage imageOfType:RECIMAGE_COMPLEX xDim:n yDim:n];
 	p1 = [tmp real]; q1 = [tmp imag];
@@ -2184,10 +2183,11 @@ Rec_dst(RecImage *src)	// src is 1D image
 		}
 	}
 	[img shift1d:[img xLoop]];
-	[img fft1d:[img xLoop] direction:REC_FORWARD];
+    [img fft1d:[img xLoop] direction:REC_INVERSE];
 	[img shift1d:[img xLoop]];
 
-printf("s-trans ... not done yet\n");
+    [img yFlip];
+    [img multByConst:n];
 
     return img;
 }
@@ -2197,6 +2197,13 @@ RecImage *
 Rec_idst(RecImage *src)
 {
 	RecImage *img;
+
+    img = [src avgForLoop:[src xLoop]];
+    [img shift1d:[img xLoop] by:[img xDim]/2 - 1];  // don't know why, but works
+    [img fft1d:[img xLoop] direction:REC_INVERSE];
+    [img shift1d:[img xLoop] by:[img xDim]/2 + 1];  // don't know why, but works
+    [img takeRealPart];
+    [img xFlip];
 
 	return img;
 }

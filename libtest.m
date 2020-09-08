@@ -396,7 +396,7 @@ test2()
 
 TIMER_ST
 
-	if (1) {	// GE
+	if (0) {	// GE
 		vd = 0;
 		raw = [RecImage imageWithPfile:@"P_rtf3.7" RECCTL:&ctl];		// 3.18 sec (first time)
 		coil = GE_Card_8_new;
@@ -3623,32 +3623,37 @@ test45()
 	int			i, ix, n, skip, dim;
 	float		*p, *q, *pp;
 	RecImage	*img, *tser, *strans;
+	RecImage	*istr;
 	int			k = 1;		// wave number
 	int			x, f;		// position, frequency
 	float		w, fxi;
 	float		er, ei, th;
 	int			xx, yy;
+RecLoopControl *lc;
 
 	printf("S-transform\n");
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/Run62547/b200-cor-si/img0.cpx"]; xx = 35; yy = 21;
-	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-5/4V/img0.phs"]; xx = 62; yy = 81; //75;
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-5/4V/img0.phs"]; xx = 62; yy = 75; //81; //75;
+	img = [RecImage imageWithKOImage:@"/Users/oshio/images/NCI/NIRS/2018-0629/results/3/mag/1/IMG_in"]; xx = 30; yy = 40;
+
 	if ([img type] == RECIMAGE_COMPLEX) {
 		[img phase];
 	}
 	n = [img zDim];
 	dim = [img xDim];
 	tser = [RecImage imageOfType:RECIMAGE_REAL xDim:n];
-	printf("n = %d\n", n);
+
 	// generate test input
-	if (1) {
+	if (0) {
+		float tmp;
 		n = 256;
 		tser = [RecImage imageOfType:RECIMAGE_REAL xDim:n];
 		pp = [tser data];
 		for (i = 0; i < n; i++) {
-			th = (float)i * i * 0.8 * M_PI / n;
-		//	th = 0.5 * i;
+			th = (float)i * i * 0.4 * M_PI / n;
 			pp[i] = sin(th);
-		//	printf("%d %f\n", i, pp[i]);
+		//	pp[i] = cos(2*M_PI*i*(0.2+6.0/(1+i)*cos(6*M_PI*i/n)));
+		//	pp[i] = cos(2.0*M_PI*i*(0.2+6.0/(1.0+i)*cos(6.0*M_PI*i/n)));
 		}
 	} else {
 	// copy input time series
@@ -3662,10 +3667,12 @@ test45()
 		}
 	}
 
-	[tser saveAsKOImage:@"IMG.in"];
+	[tser saveAsKOImage:@"IMG_in"];
 	if (1) {
 		strans = Rec_dst(tser);
-		[strans saveAsKOImage:@"IMG.str"];
+		[strans saveAsKOImage:@"IMG_str"];
+		istr = Rec_idst(strans);
+		[istr saveAsKOImage:@"IMG_istr"];
 	} else {
 
 

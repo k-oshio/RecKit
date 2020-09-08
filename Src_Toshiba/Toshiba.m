@@ -21,7 +21,8 @@
 
 + (RecImage *)imageWithToshibaFile:(NSString *)path
 {
-	return [RecImage imageWithToshibaFile:path vorder:nil];
+    RecVector   fov;
+	return [RecImage imageWithToshibaFile:path vorder:nil fov:&fov];
 }
 
 + (RecImage *)imageWithToshibaFile:(NSString *)path vorder:(RecImage **)vorder fov:(RecVector *)fov

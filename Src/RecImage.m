@@ -5019,11 +5019,13 @@ printf("not done yet\n");
 	for (i = 0; i < loopLen; i++) {
 		src.realp = [self currentDataWithControl:lc];
 		src.imagp = src.realp + dataLength;
+        // shift
 		vDSP_vswap(src.realp, src_skip, src.realp + len2 * src_skip, src_skip, len2);
 		vDSP_vswap(src.imagp, src_skip, src.imagp + len2 * src_skip, src_skip, len2);
 
 		vDSP_fft_zip(setup, &src, src_skip, lg2, direction); 
 
+        // shift
 		vDSP_vswap(src.realp, src_skip, src.realp + len2 * src_skip, src_skip, len2);
 		vDSP_vswap(src.imagp, src_skip, src.imagp + len2 * src_skip, src_skip, len2);
 		if (direction == kFFTDirection_Inverse) {
@@ -5229,6 +5231,8 @@ printf("not done yet\n");
 	Rec_destroy_dftsetup(setup);
 }
 
+// expects complex (fixed)
+// ### currently not used
 - (void)shift1d:(RecLoop *)lp
 {
 	RecLoopControl		*lc = [self outerLoopControlForLoop:lp];
@@ -5236,7 +5240,11 @@ printf("not done yet\n");
 	int					src_skip;
 	int					len, len2;	// length of inner loop
 	int					i, n = [lc loopLength];
+    BOOL                cpx = (type == RECIMAGE_COMPLEX);
 
+    if (!cpx) {
+        [self makeComplex];
+    }
 	len = [lp dataLength];
 	src_skip = [self skipSizeForLoop:lp];
 	len2 = len / 2;
@@ -5249,6 +5257,9 @@ printf("not done yet\n");
 		vDSP_vswap(src.imagp, src_skip, src.imagp + len2 * src_skip, src_skip, len2);
 		[lc increment];
 	}
+    if (!cpx) {
+        [self takeRealPart];
+    }
 }
 
 // block version
