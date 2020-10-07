@@ -22,7 +22,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B404C4771DFA8E2600528FE9 /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
 		B404C47A1DFA8EA400528FE9 /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
 		B404C47B1DFA8F5400528FE9 /* RecKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46FECC518E6C6C0000CD71D /* RecKit.framework */; };
 		B40AD5B71B2EADC50001F7F1 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
@@ -43,7 +42,6 @@
 		B45D44811AE4DC3C004BBD83 /* RecList.m in Sources */ = {isa = PBXBuildFile; fileRef = B45D447E1AE4DC3C004BBD83 /* RecList.m */; };
 		B45D44821AE4DC3C004BBD83 /* RecList.m in Sources */ = {isa = PBXBuildFile; fileRef = B45D447E1AE4DC3C004BBD83 /* RecList.m */; };
 		B4764B781448223100FC802D /* rec.m in Sources */ = {isa = PBXBuildFile; fileRef = B4764B451448209300FC802D /* rec.m */; };
-		B477D19F244EF67200267C69 /* tagDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B41AA17B19BD96F1004B9472 /* tagDictionary.plist */; };
 		B477D1A0244EF68A00267C69 /* vrDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B472717A19BEE8E600F2CA3C /* vrDictionary.plist */; };
 		B478816C12F16299007DAE42 /* mkgrid.m in Sources */ = {isa = PBXBuildFile; fileRef = B478813C12F15F1D007DAE42 /* mkgrid.m */; };
 		B480B32B18A361FA002C1E3E /* Dicom.h in Headers */ = {isa = PBXBuildFile; fileRef = B4937BBD16F05B130021A59E /* Dicom.h */; };
@@ -54,13 +52,15 @@
 		B484B6131DBF458B0031F997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
 		B48818E0100B384D003D2C3C /* libtest.m in Sources */ = {isa = PBXBuildFile; fileRef = B48818DF100B384D003D2C3C /* libtest.m */; };
 		B48B601C1AB6B56200CA54D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
+		B490A1C32518B18100020824 /* tagDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B41AA17B19BD96F1004B9472 /* tagDictionary.plist */; };
+		B490A1CF2518B42300020824 /* RecKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B25A80174DE4F8007F2758 /* RecKit.framework */; };
+		B490A1D02518B43A00020824 /* NumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E9606F190670820034884D /* NumKit.framework */; };
 		B4912F881DC4798000FD0B65 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B4912F871DC4798000FD0B65 /* libz.tbd */; };
 		B4937BDA16F07B530021A59E /* readDicom.m in Sources */ = {isa = PBXBuildFile; fileRef = B4937BD916F07B530021A59E /* readDicom.m */; };
 		B4988BFE1A381B40004E7CA0 /* gMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B4988BFD1A381B40004E7CA0 /* gMap.m */; };
 		B4988C021A38275B004E7CA0 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
 		B4B83DE419B98B170048376F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
 		B4B83DEF19B98B480048376F /* dumpDicom.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B83DEE19B98B480048376F /* dumpDicom.m */; };
-		B4B83DF019B98BD70048376F /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
 		B4C0108C1C60A4C800E15BD5 /* libRecKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B480B2FC18A361D1002C1E3E /* libRecKit.a */; };
 		B4C0108D1C60A60700E15BD5 /* libNumKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E3EFC1AD3B7E900CFF0C4 /* libNumKit.a */; };
 		B4C0108E1C60AB2A00E15BD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4DD25661946F77300CE5C0F /* Foundation.framework */; };
@@ -311,6 +311,7 @@
 		B48818DF100B384D003D2C3C /* libtest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = libtest.m; sourceTree = "<group>"; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B48A67A912703E8E00620241 /* mkkernhdr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mkkernhdr.c; sourceTree = "<group>"; };
 		B48B601D1AB6D18100CA54D6 /* RecResampler.cl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecResampler.cl.h; path = build/libRecKit.build/DerivedSources/RecResampler.cl.h; sourceTree = "<group>"; };
+		B490A1C22518AABD00020824 /* CT0001.dcm */ = {isa = PBXFileReference; lastKnownFileType = file; name = CT0001.dcm; path = Dicom/CT0001.dcm; sourceTree = "<group>"; };
 		B4912F871DC4798000FD0B65 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B4937BBD16F05B130021A59E /* Dicom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dicom.h; path = Dicom/Dicom.h; sourceTree = "<group>"; };
 		B4937BBF16F05B180021A59E /* Dicom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dicom.m; path = Dicom/Dicom.m; sourceTree = "<group>"; };
@@ -470,8 +471,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B404C4771DFA8E2600528FE9 /* NumKit.framework in Frameworks */,
-				B4B83DF019B98BD70048376F /* libRecKit.a in Frameworks */,
+				B490A1D02518B43A00020824 /* NumKit.framework in Frameworks */,
+				B490A1CF2518B42300020824 /* RecKit.framework in Frameworks */,
 				B4B83DE419B98B170048376F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				B4223170244AD4E1006BF8DB /* instance_0.dcm */,
+				B490A1C22518AABD00020824 /* CT0001.dcm */,
 				B4937BBD16F05B130021A59E /* Dicom.h */,
 				B4937BBF16F05B180021A59E /* Dicom.m */,
 				B4937BD916F07B530021A59E /* readDicom.m */,
@@ -1048,9 +1050,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B477D1A0244EF68A00267C69 /* vrDictionary.plist in Resources */,
-				B477D19F244EF67200267C69 /* tagDictionary.plist in Resources */,
 				B4C4190324600771002C5E5E /* RecKit-Info.plist in Resources */,
 				B44C548B1A3AD92D00405BE7 /* libRecKit.a in Resources */,
+				B490A1C32518B18100020824 /* tagDictionary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,7 +1289,7 @@
 				);
 				INFOPLIST_FILE = "RecKit-Info.plist";
 				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Resources/";
+				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/Projects6/NumKit/build $(HOME)/Projects6/RecKit/RecKit/build";
 				LIBRARY_SEARCH_PATHS = (
 					"$(HOME)/Projects6/RecKit/RecKit/build",
 					"$(HOME)/Projects6/NumKit/build",
@@ -1634,6 +1636,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;

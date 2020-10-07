@@ -274,6 +274,7 @@ void histogram(float *hst, int nbin, float *p, int ndata, float mn, float mx);
 - (void)thresAt:(float)th;		// make mask image: 1 if val > max * th, otherwise 0
 - (void)thresWithImage:(RecImage *)img;
 - (void)thresEachSliceAt:(float)th;
+- (void)clipAt:(float)th frac:(BOOL)fr;
 - (RecImage *)varMaskForLoop:(RecLoop *)lp;	// make mask for phase image
 - (RecImage *)magMask:(float)th;						// make mask for phase image
 - (void)logicalInv;				// 0 <-> 1

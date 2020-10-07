@@ -4180,6 +4180,30 @@ histogram(float *hst, int nbin, float *p, int ndata, float mn, float mx)
 
 }
 
+- (void)clipAt:(float)th frac:(BOOL)fr
+{
+    float    mx;
+    float    *p;
+    int        i, len;
+
+    if (fr) {
+        [self magnitude];
+        mx = [self maxVal];
+        th *= mx;
+    }
+    p = [self data];
+    len = [self dataLength];
+    for (i = 0; i < len; i++) {
+        if (p[i] > th) {
+            p[i] = 1.0;
+        } else {
+            // do nothing
+        }
+    }
+    [self checkNeg0];
+
+}
+
 // not done yet... loop size is different (img is smaller)
 - (void)thresWithImage:(RecImage *)img
 {

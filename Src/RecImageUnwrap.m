@@ -360,6 +360,7 @@ printf("mean phase = %f\n", mx);
 
 	res = [RecImage imageOfType:RECIMAGE_REAL withImage:self];
 	for (i = 0; i < nSlice; i++) {
+ printf("%d\r", i);   
 		cpx = [self sliceAtIndex:i];
 		phs = [cpx unwrap2d_block];			// 2 (try LPF)
 	//	phs = [cpx unwrap2d_block_2];		// 3
@@ -1452,7 +1453,7 @@ calc_r_4(RecImage *tiles, int t2)
 	int			i, j, n;
 	int			ii, jj;
 	int			ix;
-	int			siz = 2;	// 4
+	int			siz = 4;	// 4
 	int			xDim = [self xDim];
 	int			yDim = [self yDim];
 	float		*p, val;

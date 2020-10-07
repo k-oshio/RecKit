@@ -5,6 +5,7 @@
 #import <RecKit/RecKit.h>
 
 extern int dbg, Rec_dcm_explicit_vr;
+extern NSDictionary *tagDict;
 
 int
 main(int ac, char *av[])
@@ -14,9 +15,10 @@ main(int ac, char *av[])
         int         sts;
 //        int         i;
 
-        dbg = 0;
+        dbg = 0; //1;
 
-        [RecImage initDicomDict];
+//        [RecImage initDicomDict];
+        if (tagDict == nil) [RecImage initDicomDict];
 
         if (ac < 2) {
             printf("dumpDicom <file>\n");
