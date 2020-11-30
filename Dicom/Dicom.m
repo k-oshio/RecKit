@@ -43,13 +43,13 @@ NSDictionary    *tagDict = nil;
     }
 }
 
-+ (RecImage *)imageWithDicomFile:(NSURL *)url
++ (RecImage *)imageWithDicomFile:(NSString *)path
 {
-	NSArray		*paths = [NSArray arrayWithObject:url];
+	NSArray		*paths = [NSArray arrayWithObject:path];
 	return [RecImage imageWithDicomFiles:paths];
 }
 
-+ (RecImage *)imageWithDicomFiles:(NSArray *)URLs
++ (RecImage *)imageWithDicomFiles:(NSArray *)paths
 {
     RecImage    *img;
     FILE        *fp;
@@ -70,9 +70,9 @@ NSDictionary    *tagDict = nil;
 
     if (tagDict == nil) [RecImage initDicomDict];
 
-    zdim = (int)[URLs count];
+    zdim = (int)[paths count];
 // slice 1
-    cPath = [[[URLs objectAtIndex:0] path] UTF8String];
+    cPath = [[paths objectAtIndex:0] UTF8String];
     fp = fopen(cPath, "r");
     if (fp == NULL) return nil;
 	sts = Rec_dcm_read_file_meta(fp); // results are saved in global var
@@ -99,8 +99,7 @@ NSDictionary    *tagDict = nil;
     fclose(fp);
 // slice 2
     if (zdim > 1) {
-        cPath = [[[URLs objectAtIndex:1] path] UTF8String];
-    //    cPath = [[paths objectAtIndex:1] UTF8String];
+        cPath = [[paths objectAtIndex:1] UTF8String];
         fp = fopen(cPath, "r");
         Rec_dcm_read_item(fp, 0x20, 0x1041, REC_DCM_STRING, str, 256);
         sscanf(str, "%f", &zpos2);
@@ -126,8 +125,7 @@ NSDictionary    *tagDict = nil;
     dataLen = xdim * ydim;  // image data len in bytes
     buf = (short *)malloc(dataLen * sizeof(short));
     for (i = 0; i < zdim; i++) {
-        cPath = [[[URLs objectAtIndex:i] path] UTF8String];
-    //    cPath = [[paths objectAtIndex:i] UTF8String];
+        cPath = [[paths objectAtIndex:i] UTF8String];
         fp = fopen(cPath, "r");
         Rec_dcm_read_file_meta(fp);
 // pixel scaling (Canon CT)
