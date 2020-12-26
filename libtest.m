@@ -115,7 +115,7 @@ main()
 //	test31();	// chebychev (1d, 2d)
 //	test32();	// trig interp
 //	test33();	// complex interp
-//	test34();	// unwrap
+	test34();	// unwrap
 //	test35();	// Laplacian-base unwrap (complex version)
 //	test36();	// wavelet
 //	test37();	// phase SNR
@@ -126,7 +126,7 @@ main()
 //	test42();	// Rician correction
 //	test43();	// DICOM / Canon scaling
 //	test44();	// pinwheel test
-	test45();	// s-transform
+//	test45();	// s-transform
 
 	return 0;
 } // autoreleasepool
@@ -3019,12 +3019,116 @@ system("rm IMG_*.*");
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-ax-si/img0.cpx"];
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-si/img0.cpx"];
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-lr/img0.cpx"];
-	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-ap/img0.cpx"];
-//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62547/b200-cor-si/img0.cpx"];
+//	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62546/b1000-cor-ap/img0.cpx"];
+	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62547/b200-cor-si/img0.cpx"];
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62548/b1000-cor-si/img0.cpx"];
 //	img = [RecImage imageWithKOImage:@"../toshiba_images/DWI-nasu-1/run62549/b1000-cor-si/img0.cpx"];
 
+//img = [img sliceAtIndex:46];
 	[img saveAsKOImage:@"../test_img/IMG_34_in.img"];
+
+// laplacian (2nd attempt, 12-16-2020) ====
+	if (0) {
+		phs = [img unwrap2d_lap];
+		exit(0);
+	}
+
+// sin/cos
+	if (1) {
+		RecImage	*cs, *sn, *bnd, *mask;
+		img = [img sliceAtIndex:46];
+		[img saveAsKOImage:@"../test_img/IMG_34_slc.img"];
+
+		mask = [img copy];
+		[mask magnitude];
+		[mask thresAt:0.08];
+		[img multByImage:mask];
+		[img saveAsKOImage:@"../test_imgIMG_34_msk.img"];
+
+	//	[img gauss2DLP:0.8];
+		cs = [img copy];
+		[cs phase];
+		sn = [cs copy];
+		[cs thToCos];
+		[cs square];
+		[cs multByImage:img];
+		[sn thToSin];
+		[sn square];
+		[sn multByImage:img];
+		[cs saveAsKOImage:@"../test_img/IMG_34_cs.img"];
+		[sn saveAsKOImage:@"../test_img/IMG_34_sn.img"];
+
+// test inverse
+		bnd = [cs copy];
+		[bnd addImage:sn];
+		[bnd saveAsKOImage:@"../test_img/IMG_34_cmb.img"];
+
+// phase band decomposition (separate into image block -> bnd)
+
+	// ###
+
+// select starting band
+
+	// ###
+
+// find overlapping band, and find relative phase (compare overlapping part)
+// add n * PI (n = 0, -1, 1, -2, 2, ...) and add band
+
+	// ###
+
+		exit(0);
+	}
+// benz basis
+	if (0) {
+		RecImage	*benz, *mask, *uw;
+		float		*re, *im;
+		float		*p1, *p2, *p3;
+		float		c11, c12, c13, c21, c22, c23;	// make proj matrix
+		int			i, n;
+
+		mask = [img copy];
+		[mask magnitude];
+		[mask thresAt:0.08];
+
+		benz = [RecImage imageOfType:RECIMAGE_REAL xDim:[img xDim] yDim:[img yDim] zDim:3];
+		n = [img xDim] * [img yDim];
+		p1 = [benz data];
+		p2 = p1 + n;
+		p3 = p2 + n;
+	
+		re = [img real];
+		im = [img imag];
+		
+		// expand
+		c11 =  1.0;
+		c12 = -0.5;
+		c13 = -0.5;
+		c21 = 0.0;
+		c22 = sqrt(3)/2;
+		c23 = -sqrt(3)/2;
+		for (i = 0; i < n; i++) {
+			p1[i] = c11 * re[i] + c21 * im[i];
+			p2[i] = c12 * re[i] + c22 * im[i];
+			p3[i] = c13 * re[i] + c23 * im[i];
+		}
+		[benz saveAsKOImage:@"../test_img/IMG_34_benz.img"];
+		
+		// filter
+		[benz gauss2DLP:0.2];
+		[benz saveAsKOImage:@"../test_img/IMG_34_benz_f.img"];
+
+		// combine (transpose)
+		for (i = 0; i < n; i++) {
+			re[i] = c11 * p1[i] + c12 * p2[i] + c13 * p3[i];
+			im[i] = c21 * p1[i] + c22 * p2[i] + c23 * p3[i];
+		}
+		[img saveAsKOImage:@"../test_img/IMG_34_prj.img"];
+		
+		
+
+		exit(0);
+	}
+
 // crop
 	if (0) {
 		[img crop:[img xLoop] to:32];

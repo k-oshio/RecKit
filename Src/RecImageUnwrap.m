@@ -178,7 +178,7 @@ init_lists(int initial_len)
 // (discrete version is better)
 - (RecImage *)unwrap2d_lap
 {
-	RecImage	*img, *iofs, *phs0, *phs1, *phs2, *est0, *est1, *est2, *est3;
+	RecImage	*img, *mask, *iofs, *phs0, *phs1, *phs2, *est0, *est1, *est2, *est3;
 	RecImage	*pdif;
 	RecImage	*ph1, *ph3, *pnp;
 	RecLoop		*xLp, *yLp;
@@ -187,28 +187,28 @@ init_lists(int initial_len)
 	float		mx, sd;
 	float		*p, ofs;
 
-//	mask = [self copy];
-//	[mask magnitude];
-//	[mask thresAt:0.1];
-
-	img = [self copy];
-
-//	[img zeroFill:[img xLoop] to:256];
-//	[img zeroFill:[img yLoop] to:256];
-
-img = [img sliceAtIndex:32];
+    img = [self copy];
+    [img saveAsKOImage:@"IMG_34_in.img"];
+//img = [img sliceAtIndex:32];
 	mx = [img maxVal];
 	sd = [img noiseSigma];
 printf("mx = %f, sd = %f\n", mx, sd);
 
+    mask = [self copy];
+    [mask magnitude];
+    [mask thresAt:0.08];
+
+    [img gauss2DLP:0.2];
+    [img multByImage:mask];
+    [img saveAsKOImage:@"IMG_34_flt.img"];
+
 	phs0 = [img copy];
 	[phs0 phase];
-//	est0 = [phs0 unwrapEst2d_disc];
 	est0 = [phs0 unwrapEst2d];
 [est0 saveAsKOImage:@"IMG_34_est0.img"];
 	pdif = [est0 difMod:phs0];
 [pdif saveAsKOImage:@"IMG_34_pdif0.img"];
-
+exit(0);
 	iofs = [img copy];
 	ofs = sd * mx * 3.0; //3.0;
 //	[iofs addReal:ofs];
