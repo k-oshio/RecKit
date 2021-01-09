@@ -4195,7 +4195,7 @@ histogram(float *hst, int nbin, float *p, int ndata, float mn, float mx)
     len = [self dataLength];
     for (i = 0; i < len; i++) {
         if (p[i] > th) {
-            p[i] = 1.0;
+            p[i] = th;
         } else {
             // do nothing
         }
